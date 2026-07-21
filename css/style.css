@@ -1884,136 +1884,76 @@ MENÚ MÓVIL
     }
 
 }
-/*======================================================
-RESPONSIVE - HERO
-======================================================*/
+/*==================================================
+RESPONSIVE GLOBAL
+==================================================*/
 
-@media (max-width:1100px){
+@media (max-width: 900px){
+
+    section,
+    .container{
+        width:min(94%,700px);
+    }
+
+    header .container{
+        padding:0 16px;
+    }
+
+    .logo-texto{
+        font-size:0.95rem;
+    }
 
     .hero{
-
         grid-template-columns:1fr;
-
-        gap:40px;
-
+        gap:32px;
         text-align:center;
-
-        padding:140px 0 80px;
-
     }
 
     .hero-foto{
-
-        order:1;
-
+        justify-content:center;
     }
 
     .hero-info{
-
-        order:2;
-
-        max-width:700px;
-
-        margin:auto;
-
-    }
-
-    .hero-foto img{
-
-        max-width:320px;
-
+        max-width:100%;
     }
 
     .linea{
-
         width:180px;
-
-        margin:25px auto;
-
+        margin:20px auto 28px;
     }
 
     .datos{
-
         align-items:center;
-
     }
 
 }
 
-@media (max-width:768px){
+@media (max-width:600px){
+
+    body{
+        padding-top:72px;
+    }
 
     .hero{
+        gap:24px;
+        padding:10px 0 30px;
+    }
 
-        padding:120px 20px 60px;
-
-        min-height:auto;
-
+    .hero-foto img{
+        max-width:220px;
     }
 
     .hero-info h1{
-
-        font-size:2.4rem;
-
-    }
-
-    .hero-info h3{
-
-        font-size:.85rem;
-
-        letter-spacing:1px;
-
+        font-size:2rem;
     }
 
     .hero-info p{
-
-        font-size:1rem;
-
-        line-height:1.7;
-
-    }
-
-    .hero-foto img{
-
-        max-width:260px;
-
+        font-size:.95rem;
     }
 
     .hero-btn{
-
         width:100%;
-
         text-align:center;
-
-        padding:18px;
-
-    }
-
-}
-
-@media (max-width:480px){
-
-    .hero{
-
-        padding:110px 18px 50px;
-
-    }
-
-    .hero-info h1{
-
-        font-size:2rem;
-
-    }
-
-    .hero-foto img{
-
-        max-width:210px;
-
-    }
-
-    .dato{
-
-        font-size:.9rem;
-
     }
 
 }
