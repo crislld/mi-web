@@ -1957,3 +1957,69 @@ RESPONSIVE GLOBAL
     }
 
 }
+.laboratorio{
+
+    max-width:1200px;
+    margin:auto;
+    padding:120px 20px;
+    text-align:center;
+
+}
+
+.laboratorio h1{
+
+    font-size:52px;
+    color:#071d3a;
+    margin-bottom:20px;
+
+}
+
+.laboratorio p{
+
+    font-size:20px;
+    color:#555;
+
+}
+
+.cards{
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:40px;
+    margin-top:60px;
+
+}
+
+.card{
+
+    background:white;
+    border-radius:25px;
+    padding:40px;
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
+
+}
+
+.card h2{
+
+    color:#071d3a;
+    margin-bottom:20px;
+
+}
+
+.boton{
+
+    display:inline-block;
+    margin-top:25px;
+    background:#071d3a;
+    color:white;
+    padding:15px 35px;
+    border-radius:50px;
+    text-decoration:none;
+
+}
+
+.boton:hover{
+
+    background:#0d376f;
+
+}

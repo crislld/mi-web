@@ -1,0 +1,639 @@
+/*====================================================
+LABORATORIO VIRTUAL
+====================================================*/
+
+:root{
+
+    --lab-blue:#071d3a;
+    --lab-gold:#c8a15a;
+    --lab-light:#f8f8f8;
+    --lab-dark:#091423;
+
+}
+
+/*====================================================
+HERO
+====================================================*/
+
+.lab-hero{
+
+    position:relative;
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+
+    overflow:hidden;
+
+    background:
+    linear-gradient(
+        rgba(6,20,45,.72),
+        rgba(6,20,45,.78)
+    ),
+    url("../img/laboratorio/hero.png")
+    center center/cover no-repeat;
+
+}
+
+.lab-overlay{
+
+    position:absolute;
+    inset:0;
+
+    background:
+    radial-gradient(
+        circle at top,
+        rgba(200,161,90,.22),
+        transparent 60%
+    );
+
+}
+
+.lab-content{
+
+    position:relative;
+    z-index:5;
+
+    width:min(900px,90%);
+
+}
+
+.lab-tag{
+
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+
+    padding:12px 26px;
+
+    border:1px solid rgba(255,255,255,.18);
+
+    border-radius:50px;
+
+    color:#fff;
+
+    font-size:13px;
+
+    letter-spacing:3px;
+
+    text-transform:uppercase;
+
+    backdrop-filter:blur(16px);
+
+    background:rgba(255,255,255,.05);
+
+    margin-bottom:35px;
+
+}
+
+.lab-content h1{
+
+    font-family:"Playfair Display",serif;
+
+    font-size:82px;
+
+    line-height:1.05;
+
+    color:#fff;
+
+    margin-bottom:30px;
+
+}
+
+.lab-content h1 span{
+
+    color:var(--lab-gold);
+
+}
+
+.lab-content p{
+
+    max-width:760px;
+
+    margin:auto;
+
+    font-size:22px;
+
+    line-height:1.9;
+
+    color:rgba(255,255,255,.88);
+
+}
+
+.lab-buttons{
+
+    margin-top:60px;
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:24px;
+
+    flex-wrap:wrap;
+
+}
+
+.hero-btn-outline{
+
+    background:transparent!important;
+
+    border:2px solid rgba(255,255,255,.85);
+
+}
+
+.hero-btn-outline:hover{
+
+    background:#fff!important;
+
+    color:var(--lab-blue)!important;
+
+}
+
+.scroll-indicator{
+
+    position:absolute;
+
+    bottom:35px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    color:white;
+
+    font-size:34px;
+
+    animation:scroll 2s infinite;
+
+}
+
+@keyframes scroll{
+
+0%{
+
+transform:translate(-50%,0);
+
+}
+
+50%{
+
+transform:translate(-50%,12px);
+
+}
+
+100%{
+
+transform:translate(-50%,0);
+
+}
+
+}
+/*====================================================
+EXPERIENCIAS
+====================================================*/
+
+.lab-tools{
+
+    background:#f7f8fb;
+
+    padding:120px 0;
+
+}
+
+.lab-intro{
+
+    max-width:860px;
+
+    margin:30px auto 70px;
+
+    text-align:center;
+
+    font-size:21px;
+
+    line-height:1.9;
+
+    color:#666;
+
+}
+
+.lab-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,minmax(0,1fr));
+
+    gap:36px;
+
+}
+
+.lab-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    border-radius:32px;
+
+    height:340px;
+
+    display:flex;
+
+    align-items:flex-end;
+
+    background:#071d3a;
+
+    box-shadow:0 20px 55px rgba(0,0,0,.16);
+
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease;
+
+}
+
+.lab-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 35px 70px rgba(0,0,0,.22);
+
+}
+
+.card-bg{
+
+    position:absolute;
+
+    inset:0;
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-repeat:no-repeat;
+
+    transform:scale(1);
+
+    transition:transform .6s ease;
+
+}
+
+.lab-card:hover .card-bg{
+
+    transform:scale(1.04);
+
+}
+
+/*======================================
+DAVID IA
+======================================*/
+
+.ia .card-bg{
+
+    background:
+    linear-gradient(
+        rgba(7,29,58,.18),
+        rgba(7,29,58,.55)
+    ),
+    url("../img/laboratorio/david-ai.png")
+    center/cover no-repeat;
+
+}
+
+/*======================================
+JUEGO
+======================================*/
+
+.game .card-bg{
+
+    background:
+    linear-gradient(
+        rgba(7,29,58,.18),
+        rgba(7,29,58,.55)
+    ),
+    url("../img/laboratorio/juego.png")
+    center/cover no-repeat;
+
+}
+
+.card-content{
+
+    position:relative;
+
+    z-index:2;
+
+    width:100%;
+
+    padding:30px;
+
+    color:white;
+
+    background:
+    linear-gradient(
+        transparent,
+        rgba(7,29,58,.70)
+    );
+
+}
+
+.card-label{
+
+    display:inline-block;
+
+    padding:8px 18px;
+
+    border-radius:30px;
+
+    background:rgba(255,255,255,.14);
+
+    backdrop-filter:blur(18px);
+
+    font-size:11px;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+    margin-bottom:16px;
+
+}
+
+.card-content h3{
+
+    font-family:"Playfair Display",serif;
+
+    font-size:42px;
+
+    line-height:1.1;
+
+    margin-bottom:14px;
+
+}
+
+.card-content p{
+
+    font-size:16px;
+
+    line-height:1.6;
+
+    color:rgba(255,255,255,.92);
+
+    margin-bottom:18px;
+
+}
+
+.card-list{
+
+    list-style:none;
+
+    margin:18px 0;
+
+    padding:0;
+
+}
+
+.card-list li{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    margin-bottom:10px;
+
+    font-size:15px;
+
+}
+
+.card-list i{
+
+    color:var(--lab-gold);
+
+    font-size:18px;
+
+}
+
+.card-button{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    padding:15px 30px;
+
+    border-radius:999px;
+
+    background:var(--lab-gold);
+
+    color:#fff;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.card-button:hover{
+
+    background:#fff;
+
+    color:var(--lab-blue);
+
+}
+/*====================================================
+TABLET
+====================================================*/
+
+@media (max-width:1100px){
+
+    .lab-content h1{
+
+        font-size:64px;
+
+    }
+
+    .lab-content p{
+
+        font-size:20px;
+
+    }
+
+    .lab-grid{
+
+        grid-template-columns:1fr;
+
+        gap:30px;
+
+    }
+
+    .lab-card{
+
+        height:360px;
+
+    }
+
+}
+
+/*====================================================
+MÓVIL
+====================================================*/
+
+@media (max-width:768px){
+
+    .lab-hero{
+
+        min-height:90vh;
+
+        padding:120px 0 80px;
+
+    }
+
+    .lab-content h1{
+
+        font-size:48px;
+
+    }
+
+    .lab-content p{
+
+        font-size:18px;
+
+        line-height:1.7;
+
+    }
+
+    .lab-buttons{
+
+        flex-direction:column;
+
+        align-items:center;
+
+        gap:18px;
+
+    }
+
+    .hero-btn{
+
+        width:260px;
+
+        text-align:center;
+
+    }
+
+    .lab-tools{
+
+        padding:90px 0;
+
+    }
+
+    .lab-intro{
+
+        font-size:18px;
+
+        margin-bottom:45px;
+
+    }
+
+    .lab-card{
+
+        height:320px;
+
+        border-radius:26px;
+
+    }
+
+    .card-content{
+
+        padding:24px;
+
+    }
+
+    .card-content h3{
+
+        font-size:34px;
+
+    }
+
+    .card-content p{
+
+        font-size:15px;
+
+    }
+
+    .card-list{
+
+        display:none;
+
+    }
+
+    .card-button{
+
+        width:100%;
+
+        justify-content:center;
+
+    }
+
+}
+
+/*====================================================
+MÓVIL PEQUEÑO
+====================================================*/
+
+@media (max-width:480px){
+
+    .lab-content h1{
+
+        font-size:38px;
+
+    }
+
+    .lab-tag{
+
+        font-size:11px;
+
+        letter-spacing:2px;
+
+        padding:10px 18px;
+
+    }
+
+    .lab-content p{
+
+        font-size:16px;
+
+    }
+
+    .lab-card{
+
+        height:290px;
+
+    }
+
+    .card-content{
+
+        padding:20px;
+
+    }
+
+    .card-content h3{
+
+        font-size:28px;
+
+    }
+
+    .card-button{
+
+        padding:14px 22px;
+
+        font-size:14px;
+
+    }
+
+}
