@@ -10,9 +10,7 @@ HERO
 
 .cv-hero{
 
-    height:70vh;
-
-    min-height:560px;
+    position:relative;
 
     display:flex;
 
@@ -22,11 +20,17 @@ HERO
 
     text-align:center;
 
+    min-height:78vh;
+
+    padding:140px 20px 120px;
+
     color:#fff;
 
+    overflow:hidden;
+
     background:
-        linear-gradient(rgba(10,27,50,.72),
-        rgba(10,27,50,.72)),
+        linear-gradient(rgba(8,26,49,.78),
+        rgba(8,26,49,.78)),
         url("../img/contacto/hero.jpg")
         center center/cover no-repeat;
 
@@ -34,47 +38,57 @@ HERO
 
 .cv-overlay{
 
-    max-width:900px;
+    position:relative;
 
-    padding:40px;
+    z-index:2;
 
-}
+    width:100%;
 
-.cv-hero h1{
-
-    font-family:"Playfair Display",serif;
-
-    font-size:4.2rem;
-
-    margin:25px 0;
-
-}
-
-.cv-hero p{
-
-    max-width:760px;
+    max-width:980px;
 
     margin:auto;
-
-    font-size:1.18rem;
-
-    line-height:1.9;
 
 }
 
 .hero-tag{
 
-    display:inline-block;
+    display:inline-flex;
 
-    padding:8px 20px;
+    align-items:center;
 
-    border:1px solid rgba(255,255,255,.35);
+    gap:10px;
+
+    padding:10px 22px;
+
+    border:1px solid rgba(255,255,255,.28);
 
     border-radius:40px;
 
     letter-spacing:2px;
 
-    font-size:.85rem;
+    font-size:.82rem;
+
+    font-weight:600;
+
+    text-transform:uppercase;
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(10px);
+
+}
+
+.cv-hero h1{
+
+    margin:32px 0 22px;
+
+    font-family:"Playfair Display",serif;
+
+    font-size:clamp(3rem,6vw,5rem);
+
+    line-height:1.05;
+
+    color:#fff;
 
 }
 
@@ -84,45 +98,62 @@ HERO
 
     height:4px;
 
-    background:#c99b3b;
+    margin:0 auto 35px;
 
-    margin:30px auto;
+    border-radius:50px;
 
-    border-radius:10px;
+    background:#c8a15a;
+
+}
+
+.cv-hero p{
+
+    max-width:760px;
+
+    margin:0 auto;
+
+    font-size:1.15rem;
+
+    line-height:1.9;
+
+    color:rgba(255,255,255,.92);
 
 }
 
 .cv-hero .btn{
 
-    margin-top:40px;
+    margin-top:45px;
+
+    padding:15px 34px;
 
 }
-
-
-
 /*======================================================
 PERFIL
 ======================================================*/
 
 .cv-profile{
 
-    padding:110px 20px;
+    padding:120px 0;
 
-    background:#fff;
+    background:#ffffff;
+
+}
+
+.cv-profile .container{
+
+    width:min(1280px,92%);
+
+    margin:0 auto;
 
 }
 
 .profile-grid{
 
-    max-width:1200px;
-
-    margin:auto;
-
     display:grid;
 
-    grid-template-columns:350px 1fr;
+    grid-template-columns:380px 1fr;
 
-    gap:70px;
+    gap:90px;
 
     align-items:center;
 
@@ -130,7 +161,11 @@ PERFIL
 
 .profile-image{
 
-    text-align:center;
+    position:relative;
+
+    display:flex;
+
+    justify-content:center;
 
 }
 
@@ -138,39 +173,58 @@ PERFIL
 
     width:100%;
 
-    max-width:330px;
+    max-width:360px;
 
-    border-radius:22px;
+    display:block;
 
-    box-shadow:0 20px 45px rgba(0,0,0,.16);
+    border-radius:28px;
+
+    box-shadow:
+        0 25px 60px rgba(0,0,0,.18);
+
+}
+
+.profile-content{
+
+    max-width:760px;
 
 }
 
 .profile-content h2{
 
-    font-size:3rem;
+    font-family:"Playfair Display",serif;
 
-    margin:18px 0 10px;
+    font-size:3.3rem;
 
     color:#0b2242;
+
+    margin:20px 0 12px;
+
+    line-height:1.1;
 
 }
 
 .profile-content h3{
 
-    color:#666;
+    font-size:1.15rem;
 
     font-weight:500;
 
-    margin-bottom:28px;
+    color:#6b7280;
+
+    line-height:1.8;
+
+    margin-bottom:32px;
 
 }
 
 .profile-content p{
 
-    color:#555;
+    color:#596273;
 
-    line-height:1.9;
+    font-size:1.05rem;
+
+    line-height:1.95;
 
     margin-bottom:22px;
 
@@ -182,26 +236,110 @@ PERFIL
 
     gap:18px;
 
+    margin-top:38px;
+
     flex-wrap:wrap;
 
 }
+
+.profile-buttons .btn{
+
+    padding:14px 30px;
+
+}
 /*======================================================
-INDICADORES CIENTÍFICOS
+INTRODUCCIÓN
 ======================================================*/
 
-.cv-stats{
+.career-intro{
 
-    padding:90px 20px;
+    padding:120px 0;
 
-    background:#f5f7fa;
+    background:#f8fafc;
 
 }
 
-.stats-grid{
+.career-intro .container{
 
-    max-width:1200px;
+    width:min(1280px,92%);
 
     margin:auto;
+
+}
+
+.career-grid{
+
+    display:grid;
+
+    grid-template-columns:1.1fr .9fr;
+
+    gap:80px;
+
+    align-items:center;
+
+}
+
+.career-text{
+
+    max-width:700px;
+
+}
+
+.career-text p{
+
+    color:#5b6472;
+
+    font-size:1.05rem;
+
+    line-height:2;
+
+    margin-bottom:24px;
+
+}
+
+.career-image{
+
+    display:flex;
+
+    justify-content:center;
+
+}
+
+.career-image img{
+
+    width:100%;
+
+    max-width:560px;
+
+    border-radius:24px;
+
+    object-fit:cover;
+
+    box-shadow:
+        0 25px 60px rgba(0,0,0,.15);
+
+}
+/*======================================================
+CENTROS DE INVESTIGACIÓN
+======================================================*/
+
+.research-centers{
+
+    padding:120px 0;
+
+    background:#ffffff;
+
+}
+
+.research-centers .container{
+
+    width:min(1280px,92%);
+
+    margin:auto;
+
+}
+
+.centers-grid{
 
     display:grid;
 
@@ -209,240 +347,259 @@ INDICADORES CIENTÍFICOS
 
     gap:30px;
 
+    margin-top:70px;
+
 }
 
-.stat-card{
+.center-card{
 
     background:#fff;
 
-    border-radius:18px;
+    border-radius:22px;
 
-    padding:40px 25px;
+    padding:35px 28px;
 
     text-align:center;
 
-    box-shadow:0 12px 30px rgba(0,0,0,.08);
+    border:1px solid #edf0f4;
 
-    transition:.3s;
+    box-shadow:0 15px 40px rgba(0,0,0,.07);
+
+    transition:.35s;
 
 }
 
-.stat-card:hover{
+.center-card:hover{
 
     transform:translateY(-8px);
 
+    box-shadow:0 25px 60px rgba(0,0,0,.12);
+
 }
 
-.stat-card h3{
+.center-card img{
 
-    font-size:2.7rem;
+    width:90px;
+
+    height:90px;
+
+    object-fit:contain;
+
+    margin:0 auto 22px;
+
+    display:block;
+
+}
+
+.center-card h3{
+
+    font-family:"Playfair Display",serif;
+
+    font-size:1.35rem;
 
     color:#0b2242;
 
     margin-bottom:10px;
 
-    font-family:"Playfair Display",serif;
+    line-height:1.3;
 
 }
 
-.stat-card span{
+.center-card span{
 
-    color:#666;
+    display:block;
 
-    font-size:1rem;
+    color:#c8a15a;
+
+    font-weight:700;
+
+    font-size:.95rem;
+
+    margin-bottom:18px;
 
 }
 
+.center-card p{
 
+    color:#5b6472;
 
+    font-size:.98rem;
+
+    line-height:1.8;
+
+}
 /*======================================================
-CABECERAS DE SECCIÓN
+TRAYECTORIA CIENTÍFICA
 ======================================================*/
 
-.section-header{
+.career{
+
+    padding:130px 0;
+
+    background:#f8fafc;
+
+}
+
+.career .container{
+
+    width:min(1320px,92%);
+
+    margin:auto;
+
+}
+
+.career .section-header{
 
     max-width:850px;
 
-    margin:0 auto 70px;
+    margin:0 auto 90px;
 
     text-align:center;
 
 }
 
-.section-header h2{
-
-    font-size:2.8rem;
-
-    margin:20px 0;
-
-    color:#0b2242;
-
-    font-family:"Playfair Display",serif;
-
-}
-
-.section-header p{
-
-    color:#666;
-
-    line-height:1.8;
-
-}
-
-
-
-/*======================================================
-TIMELINE
-======================================================*/
-
-.cv-experience{
-
-    padding:110px 20px;
-
-    background:#fff;
-
-}
-
-.timeline{
-
-    max-width:950px;
-
-    margin:0 auto;
+.career-timeline{
 
     position:relative;
-
-}
-
-.timeline::before{
-
-    content:"";
-
-    position:absolute;
-
-    left:160px;
-
-    top:0;
-
-    bottom:0;
-
-    width:3px;
-
-    background:#d9dee6;
-
-}
-
-.timeline-item{
 
     display:grid;
 
-    grid-template-columns:140px 1fr;
+    grid-template-columns:repeat(6,1fr);
 
-    gap:40px;
+    gap:30px;
 
-    margin-bottom:55px;
+    align-items:start;
 
-    position:relative;
-
-}
-
-.timeline-date{
-
-    text-align:right;
-
-    color:#b5892d;
-
-    font-weight:700;
-
-    padding-top:8px;
+    margin-top:90px;
 
 }
 
-.timeline-box{
-
-    background:#fff;
-
-    padding:30px;
-
-    border-radius:18px;
-
-    box-shadow:0 12px 28px rgba(0,0,0,.08);
-
-    position:relative;
-
-}
-
-.timeline-box::before{
-
-    content:"";
+.career-line{
 
     position:absolute;
 
-    left:-39px;
+    top:38px;
 
-    top:32px;
+    left:8%;
 
-    width:18px;
+    right:8%;
 
-    height:18px;
+    height:4px;
+
+    background:#c8a15a;
+
+    border-radius:10px;
+
+    z-index:1;
+
+}
+
+.career-step{
+
+    position:relative;
+
+    z-index:2;
+
+    text-align:center;
+
+}
+
+.career-icon{
+
+    width:76px;
+
+    height:76px;
+
+    margin:0 auto 22px;
 
     border-radius:50%;
 
-    background:#b5892d;
+    background:#ffffff;
 
-    border:5px solid #fff;
+    border:4px solid #c8a15a;
 
-    box-shadow:0 0 0 3px #d9dee6;
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:30px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
 
 }
 
-.timeline-box h3{
+.career-year{
+
+    font-size:1rem;
+
+    font-weight:700;
+
+    color:#c8a15a;
+
+    margin-bottom:10px;
+
+    letter-spacing:1px;
+
+}
+
+.career-step h3{
+
+    font-family:"Playfair Display",serif;
+
+    font-size:1.2rem;
 
     color:#0b2242;
 
-    margin-bottom:8px;
+    margin-bottom:10px;
+
+    line-height:1.3;
 
 }
 
-.timeline-box h4{
+.career-step p{
 
-    color:#777;
+    color:#5b6472;
 
-    font-weight:500;
+    font-size:.95rem;
 
-    margin-bottom:16px;
+    line-height:1.7;
 
-}
+    max-width:180px;
 
-.timeline-box p{
-
-    color:#555;
-
-    line-height:1.8;
+    margin:0 auto;
 
 }
 /*======================================================
-FORMACIÓN · ACTIVIDAD
+FORMACIÓN · INVESTIGACIÓN
 ======================================================*/
 
 .cv-highlights{
 
-    padding:110px 20px;
+    padding:120px 0;
 
-    background:#f7f8fa;
+    background:#ffffff;
+
+}
+
+.cv-highlights .container{
+
+    width:min(1280px,92%);
+
+    margin:auto;
 
 }
 
 .highlights-grid{
 
-    max-width:1200px;
-
-    margin:auto;
-
     display:grid;
 
-    grid-template-columns:repeat(2,1fr);
+    grid-template-columns:repeat(4,1fr);
 
     gap:30px;
+
+    margin-top:70px;
 
 }
 
@@ -450,13 +607,15 @@ FORMACIÓN · ACTIVIDAD
 
     background:#fff;
 
-    border-radius:18px;
+    padding:40px 35px;
 
-    padding:40px;
+    border-radius:22px;
 
-    box-shadow:0 12px 30px rgba(0,0,0,.08);
+    text-align:center;
 
-    transition:.3s;
+    box-shadow:0 15px 45px rgba(0,0,0,.08);
+
+    transition:.35s;
 
 }
 
@@ -464,158 +623,90 @@ FORMACIÓN · ACTIVIDAD
 
     transform:translateY(-8px);
 
+    box-shadow:0 25px 60px rgba(0,0,0,.12);
+
 }
 
 .highlight-icon{
 
-    width:70px;
+    width:78px;
 
-    height:70px;
+    height:78px;
+
+    margin:0 auto 25px;
 
     border-radius:50%;
 
-    background:#0b2242;
-
-    color:#fff;
+    background:#c8a15a;
 
     display:flex;
 
-    justify-content:center;
-
     align-items:center;
 
-    margin-bottom:25px;
+    justify-content:center;
 
 }
 
 .highlight-icon svg{
 
-    width:30px;
+    width:34px;
 
-    height:30px;
+    height:34px;
+
+    stroke:#fff;
 
 }
 
 .highlight-card h3{
 
+    font-family:"Playfair Display",serif;
+
+    font-size:1.35rem;
+
     color:#0b2242;
 
-    margin-bottom:15px;
+    margin-bottom:18px;
 
 }
 
 .highlight-card p{
 
-    color:#555;
+    color:#5b6472;
 
     line-height:1.8;
 
 }
 
 
-
 /*======================================================
-PROYECTOS
-======================================================*/
-
-.cv-projects{
-
-    padding:110px 20px;
-
-    background:#fff;
-
-}
-
-.projects-grid{
-
-    max-width:1200px;
-
-    margin:auto;
-
-    display:grid;
-
-    grid-template-columns:repeat(3,1fr);
-
-    gap:30px;
-
-}
-
-.project-card{
-
-    background:#fff;
-
-    border-top:5px solid #b5892d;
-
-    border-radius:18px;
-
-    padding:35px;
-
-    box-shadow:0 12px 30px rgba(0,0,0,.08);
-
-    transition:.3s;
-
-}
-
-.project-card:hover{
-
-    transform:translateY(-8px);
-
-}
-
-.project-type{
-
-    color:#b5892d;
-
-    font-size:.8rem;
-
-    letter-spacing:2px;
-
-    font-weight:700;
-
-    display:block;
-
-    margin-bottom:18px;
-
-}
-
-.project-card h3{
-
-    color:#0b2242;
-
-    margin-bottom:18px;
-
-}
-
-.project-card p{
-
-    color:#555;
-
-    line-height:1.8;
-
-}
-/*======================================================
-RECONOCIMIENTOS
+IMPACTO CIENTÍFICO
 ======================================================*/
 
 .cv-achievements{
 
-    padding:110px 20px;
+    padding:120px 0;
 
     background:#f7f8fa;
 
 }
 
-.achievement-grid{
+.cv-achievements .container{
 
-    max-width:1200px;
+    width:min(1280px,92%);
 
     margin:auto;
 
+}
+
+.achievement-grid{
+
     display:grid;
 
-    grid-template-columns:repeat(3,1fr);
+    grid-template-columns:repeat(4,1fr);
 
     gap:30px;
+
+    margin-top:70px;
 
 }
 
@@ -623,15 +714,15 @@ RECONOCIMIENTOS
 
     background:#fff;
 
-    padding:40px;
+    border-radius:22px;
 
-    border-radius:18px;
+    padding:40px 35px;
 
     text-align:center;
 
-    box-shadow:0 12px 30px rgba(0,0,0,.08);
+    box-shadow:0 15px 45px rgba(0,0,0,.08);
 
-    transition:.3s;
+    transition:.35s;
 
 }
 
@@ -643,51 +734,196 @@ RECONOCIMIENTOS
 
 .achievement-card svg{
 
-    width:48px;
+    width:42px;
 
-    height:48px;
+    height:42px;
 
-    color:#b5892d;
+    color:#c8a15a;
 
-    margin-bottom:25px;
+    margin-bottom:22px;
 
 }
 
 .achievement-card h3{
 
+    font-family:"Playfair Display",serif;
+
     color:#0b2242;
 
-    margin-bottom:15px;
+    margin-bottom:18px;
 
 }
 
 .achievement-card p{
 
-    color:#555;
+    color:#5b6472;
 
     line-height:1.8;
 
 }
-
-
-
 /*======================================================
-DESCARGA CV
+PROYECTOS
 ======================================================*/
 
-.cv-download{
+.cv-projects{
 
-    padding:120px 20px;
+    padding:120px 0;
 
-    background:#0b2242;
-
-    color:#fff;
+    background:#ffffff;
 
 }
 
-.download-box{
+.cv-projects .container{
 
-    max-width:850px;
+    width:min(1280px,92%);
+
+    margin:auto;
+
+}
+
+.projects-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:35px;
+
+    margin-top:70px;
+
+}
+
+.project-card{
+
+    background:#fff;
+
+    border-top:5px solid #c8a15a;
+
+    border-radius:22px;
+
+    padding:40px 35px;
+
+    box-shadow:0 15px 45px rgba(0,0,0,.08);
+
+    transition:.35s;
+
+}
+
+.project-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 25px 60px rgba(0,0,0,.12);
+
+}
+
+.project-type{
+
+    display:inline-block;
+
+    color:#c8a15a;
+
+    font-size:.82rem;
+
+    font-weight:700;
+
+    letter-spacing:2px;
+
+    margin-bottom:18px;
+
+}
+
+.project-card h3{
+
+    font-family:"Playfair Display",serif;
+
+    color:#0b2242;
+
+    font-size:1.5rem;
+
+    margin-bottom:18px;
+
+}
+
+.project-card p{
+
+    color:#5b6472;
+
+    line-height:1.9;
+
+}
+
+
+/*======================================================
+CITA FINAL
+======================================================*/
+
+.cv-quote{
+
+    padding:120px 0;
+
+    background:#0b2242;
+
+    text-align:center;
+
+}
+
+.cv-quote .container{
+
+    width:min(900px,90%);
+
+    margin:auto;
+
+}
+
+.cv-quote blockquote{
+
+    font-family:"Playfair Display",serif;
+
+    font-size:2.1rem;
+
+    line-height:1.7;
+
+    color:#ffffff;
+
+    font-style:italic;
+
+}
+
+.cv-quote blockquote::before{
+
+    content:"“";
+
+    color:#c8a15a;
+
+}
+
+.cv-quote blockquote::after{
+
+    content:"”";
+
+    color:#c8a15a;
+
+}
+
+
+/*======================================================
+FOOTER
+======================================================*/
+
+footer{
+
+    background:#071d3a;
+
+    color:#ffffff;
+
+    padding:35px 0;
+
+}
+
+footer .container{
+
+    width:min(1280px,92%);
 
     margin:auto;
 
@@ -695,148 +931,207 @@ DESCARGA CV
 
 }
 
-.download-box h2{
-
-    color:#fff;
-
-    font-size:3rem;
-
-    margin:20px 0;
-
-    font-family:"Playfair Display",serif;
-
-}
-
-.download-box p{
+footer p{
 
     color:rgba(255,255,255,.85);
 
-    line-height:1.8;
+    font-size:.95rem;
 
-    margin-bottom:40px;
+    letter-spacing:.4px;
 
 }
-
-
 
 /*======================================================
 RESPONSIVE
 ======================================================*/
 
-@media(max-width:992px){
+@media (max-width:1200px){
 
-.stats-grid{
+    .profile-grid,
+    .career-grid{
 
-grid-template-columns:repeat(2,1fr);
+        grid-template-columns:1fr;
+        gap:60px;
+        text-align:center;
 
-}
+    }
 
-.projects-grid{
+    .career-text{
 
-grid-template-columns:1fr;
+        margin:auto;
 
-}
+    }
 
-.highlights-grid{
+    .career-image{
 
-grid-template-columns:1fr;
+        order:-1;
 
-}
+    }
 
-.achievement-grid{
+    .centers-grid{
 
-grid-template-columns:1fr;
+        grid-template-columns:repeat(2,1fr);
 
-}
+    }
 
-.profile-grid{
+    .highlights-grid{
 
-grid-template-columns:1fr;
+        grid-template-columns:repeat(2,1fr);
 
-text-align:center;
+    }
 
-}
+    .projects-grid{
 
-.profile-buttons{
+        grid-template-columns:1fr;
 
-justify-content:center;
+    }
 
-}
+    .achievement-grid{
 
-.timeline::before{
+        grid-template-columns:repeat(2,1fr);
 
-left:22px;
-
-}
-
-.timeline-item{
-
-grid-template-columns:1fr;
-
-padding-left:55px;
-
-}
-
-.timeline-date{
-
-text-align:left;
-
-padding:0;
-
-margin-bottom:10px;
-
-}
-
-.timeline-box::before{
-
-left:-42px;
-
-}
+    }
 
 }
 
 
+@media (max-width:992px){
 
-@media(max-width:768px){
+    .career-timeline{
 
-.cv-hero{
+        grid-template-columns:repeat(2,1fr);
+        row-gap:60px;
 
-min-height:500px;
+    }
 
-padding:40px 20px;
+    .career-line{
 
-}
+        display:none;
 
-.cv-hero h1{
+    }
 
-font-size:2.8rem;
+    .career-step{
 
-}
+        width:100%;
+        max-width:280px;
+        margin:auto;
 
-.section-header h2{
-
-font-size:2.2rem;
-
-}
-
-.profile-content h2{
-
-font-size:2.3rem;
+    }
 
 }
 
-.stats-grid{
 
-grid-template-columns:1fr;
+@media (max-width:768px){
+
+    .cv-hero{
+
+        min-height:600px;
+        padding:120px 20px 80px;
+
+    }
+
+    .cv-hero h1{
+
+        font-size:2.7rem;
+
+    }
+
+    .section-header h2{
+
+        font-size:2.3rem;
+
+    }
+
+    .profile-content h2{
+
+        font-size:2.4rem;
+
+    }
+
+    .profile-content h3{
+
+        font-size:1rem;
+
+    }
+
+    .profile-buttons{
+
+        justify-content:center;
+
+    }
+
+    .centers-grid,
+    .highlights-grid,
+    .achievement-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .career-timeline{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .career-step{
+
+        max-width:340px;
+
+    }
+
+    .cv-quote blockquote{
+
+        font-size:1.6rem;
+
+    }
 
 }
 
-.hero-tag{
 
-font-size:.75rem;
+@media (max-width:480px){
 
-letter-spacing:1px;
+    .hero-tag{
 
-}
+        font-size:.72rem;
+        letter-spacing:1px;
+        padding:8px 16px;
+
+    }
+
+    .cv-hero h1{
+
+        font-size:2.2rem;
+
+    }
+
+    .profile-content h2{
+
+        font-size:2rem;
+
+    }
+
+    .section-header h2{
+
+        font-size:2rem;
+
+    }
+
+    .career-icon{
+
+        width:64px;
+        height:64px;
+        font-size:24px;
+
+    }
+
+    .project-card,
+    .highlight-card,
+    .achievement-card,
+    .center-card{
+
+        padding:30px 24px;
+
+    }
 
 }
