@@ -637,3 +637,19 @@ MÓVIL PEQUEÑO
     }
 
 }
+
+/*======================================
+SIMULADOR DE VUELO
+======================================*/
+
+.simulator .card-bg{
+
+    background:
+    linear-gradient(
+        rgba(7,29,58,.16),
+        rgba(7,29,58,.68)
+    ),
+    url("../img/laboratorio/campo-cebada-aereo.jpg")
+    center/cover no-repeat;
+
+}
