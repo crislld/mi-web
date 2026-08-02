@@ -1,137 +1,130 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-
 <head>
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Divulgación | David Gómez Candón</title>
-
-    <meta name="description"
-        content="Canal de divulgación científica de David Gómez Candón.">
-
-    <!-- Google Fonts -->
-
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Divulgación científica, conferencias, charlas y demostraciones de David Gómez Candón.">
+    <title>Divulgación científica | David Gómez Candón</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-
-    <link rel="preconnect"
-        href="https://fonts.gstatic.com"
-        crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&display=swap"
-        rel="stylesheet">
-
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/divulgacion.css">
-
+    <link rel="stylesheet" href="css/divulgacion-pro.css">
+    <link rel="stylesheet" href="css/divulgacion-events.css">
 </head>
-
-<body>
-
-<header class="header">
-
-    <div class="container">
-
-        <a href="index.html" class="logo">
-
-            <div class="logo-dg">
-                DG
-            </div>
-
-            <div class="logo-info">
-
-                <h2>David Gómez Candón</h2>
-
-                <span>EEAD · CSIC</span>
-
-            </div>
-
-        </a>
-
-        <nav>
-
-            <a href="index.html">Inicio</a>
-
-            <a href="investigacion.html">Investigación</a>
-
-            <a href="cv.html">Perfil académico</a>
-
-            <a href="divulgacion.html" class="activo">
-                Divulgación
+<body class="outreach-page">
+    <header class="outreach-header">
+        <div class="container">
+            <a href="index.html" class="logo" aria-label="Inicio, David Gómez Candón">
+                <span class="logo-dg">DG</span>
+                <span class="logo-texto">DAVID GÓMEZ CANDÓN<small>Investigación en agricultura digital</small></span>
             </a>
-
-            <a href="contacto.html">Contacto</a>
-
-        </nav>
-
-    </div>
-
-</header>
-
-<main>
-
-<section class="hero">
-
-    <!-- Imagen de fondo -->
-
-    <img
-        src="img/divulgacion/hero.jpg"
-        alt="David Gómez Candón"
-        class="hero-image">
-
-    <!-- Degradado -->
-
-    <div class="hero-gradient"></div>
-
-    <!-- Contenido -->
-
-    <div class="hero-content">
-
-        <span class="hero-tag">
-
-            DIVULGACIÓN CIENTÍFICA
-
-        </span>
-
-        <h1>
-
-            Ciencia
-
-            <span>para todos</span>
-
-        </h1>
-
-        <p>
-
-            Vídeos, conferencias y demostraciones sobre agricultura de precisión,
-            sensores remotos, drones, inteligencia artificial y nuevas tecnologías
-            aplicadas a la agricultura.
-
-        </p>
-
-        <div class="hero-buttons">
-
-            <a href="#" class="btn-primary">
-
-                Ver canal de YouTube
-
-            </a>
-
-            <a href="#" class="btn-secondary">
-
-                Explorar vídeos
-
-            </a>
-
+            <nav aria-label="Navegación principal">
+                <a href="index.html">Inicio</a>
+                <a href="index.html#investigacion">Investigación</a>
+                <a href="publicaciones.html">Publicaciones</a>
+                <a href="cv.html">CV</a>
+                <a href="divulgacion.html" aria-current="page">Divulgación</a>
+                <a href="contacto.html">Contacto</a>
+            </nav>
         </div>
+    </header>
 
-    </div>
+    <main>
+        <section class="outreach-hero">
+            <div class="outreach-hero__content">
+                <span class="outreach-kicker">DIVULGACIÓN CIENTÍFICA</span>
+                <h1>La ciencia se comparte.</h1>
+                <p>Charlas, congresos y demostraciones para acercar la agricultura de precisión, los drones, los sensores remotos y la inteligencia artificial a todos los públicos.</p>
+                <a class="outreach-hero__cta" href="#galeria">Explorar la galería <i data-lucide="arrow-down"></i></a>
+            </div>
+            <img src="img/divulgacion/exposicion-drones.jpg" alt="David Gómez Candón durante una demostración de drones" class="outreach-hero__image">
+        </section>
 
-</section>
+        <section class="youtube-soon" id="youtube">
+            <div class="youtube-soon__icon"><i data-lucide="youtube"></i></div>
+            <div>
+                <span class="outreach-kicker">PRÓXIMAMENTE</span>
+                <h2>Canal de YouTube</h2>
+                <p>Estamos preparando un espacio con charlas, demostraciones y contenidos sobre agricultura digital. El enlace al canal estará disponible aquí cuando se publique.</p>
+            </div>
+            <span class="youtube-soon__status"><i data-lucide="clock-3"></i> En preparación</span>
+        </section>
 
-</main>
+        <section class="outreach-gallery" id="galeria">
+            <div class="outreach-section-heading">
+                <span class="outreach-kicker">ACTIVIDADES</span>
+                <h2>Charlas, congresos y exposiciones</h2>
+                <p>Una selección de encuentros en los que la investigación se explica, se debate y se conecta con la sociedad.</p>
+            </div>
 
+            <div class="gallery-grid">
+                <a class="gallery-card gallery-card--wide" href="img/divulgacion/conferencia-internacional.jpg" target="_blank" rel="noopener">
+                    <img src="img/divulgacion/conferencia-internacional.jpg" alt="David Gómez Candón durante una presentación en congreso">
+                    <span class="gallery-card__overlay"><strong>Conferencia científica</strong><small>Presentación de resultados de investigación</small><i data-lucide="expand"></i></span>
+                </a>
+                <a class="gallery-card" href="img/divulgacion/charla-uav.jpg" target="_blank" rel="noopener">
+                    <img src="img/divulgacion/charla-uav.jpg" alt="Presentación sobre teledetección basada en UAV">
+                    <span class="gallery-card__overlay"><strong>Teledetección y UAV</strong><small>Comunicación científica</small><i data-lucide="expand"></i></span>
+                </a>
+                <a class="gallery-card" href="img/divulgacion/exposicion-drones.jpg" target="_blank" rel="noopener">
+                    <img src="img/divulgacion/exposicion-drones.jpg" alt="David Gómez Candón en una exposición sobre drones">
+                    <span class="gallery-card__overlay"><strong>Exposición de tecnología</strong><small>Drones y agricultura de precisión</small><i data-lucide="expand"></i></span>
+                </a>
+                <a class="gallery-card gallery-card--wide" href="img/divulgacion/demostracion-dron.jpg" target="_blank" rel="noopener">
+                    <img src="img/divulgacion/demostracion-dron.jpg" alt="Demostración de dron y sensores para agricultura">
+                    <span class="gallery-card__overlay"><strong>Demostración técnica</strong><small>Sensores, drones e imágenes de cultivos</small><i data-lucide="expand"></i></span>
+                </a>
+                <article class="gallery-placeholder" aria-label="Espacio reservado para futuras fotografías">
+                    <i data-lucide="image-plus"></i>
+                    <strong>Próximas actividades</strong>
+                    <span>Este espacio está preparado para nuevas fotografías.</span>
+                </article>
+            </div>
+        </section>
+
+        <section class="outreach-events" id="intervenciones">
+            <div class="outreach-section-heading">
+                <span class="outreach-kicker">INTERVENCIONES CIENTÍFICAS</span>
+                <h2>Presentaciones en congresos</h2>
+                <p>Una selección de comunicaciones y contribuciones recogidas en el currículum de David Gómez Candón.</p>
+            </div>
+            <div class="events-list">
+                <article class="event-item"><time datetime="2025">2025</time><div><h3>VII Spanish Symposium of Physiology and Breeding of Cereals</h3><p>High-Resolution UAV-based Multispectral and Thermal Imaging for Evaluating Fungal Disease Severity in Barley under Field Conditions.</p><span>Barcelona, España</span></div></article>
+                <article class="event-item"><time datetime="2024">2024</time><div><h3>VI Spanish Symposium of Physiology and Breeding of Cereals (SEFIMEC)</h3><p>Integrating vegetation indices and biophysical parameters for harvest traits estimations in barley: A UAV-based comparative study under irrigated and rainfed conditions.</p><span>Salamanca, España</span></div></article>
+                <article class="event-item"><time datetime="2024">2024</time><div><h3>IGARSS 2024 · IEEE International Geoscience and Remote Sensing Symposium</h3><p>Tuning the Monitoring of Actual Daily Evapotranspiration Merging Satellite Data Fusion and Surface Energy Balance.</p><span>Atenas, Grecia</span></div></article>
+                <article class="event-item"><time datetime="2023">2023</time><div><h3>V SEFIMEC Conference</h3><p>Comparison of LAI estimations from remote sensing: multispectral and RGB imagery approaches.</p><span>Lleida, España</span></div></article>
+                <article class="event-item"><time datetime="2021">2021</time><div><h3>Congreso de la Sociedad Española de Ciencias Hortícolas (SECH)</h3><p>Evaluación de la respuesta a fertilización nitrogenada y uso de inhibidores de la nitrificación en melocotón mediante teledetección.</p><span>Córdoba, España</span></div></article>
+                <article class="event-item"><time datetime="2019">2019</time><div><h3>European Conference on Precision Agriculture</h3><p>Upscaling thermal aerial imagery for high-resolution evapotranspiration estimations.</p><span>Montpellier, Francia</span></div></article>
+            </div>
+            <details class="events-history">
+                <summary>Ver más intervenciones (2008–2017) <i data-lucide="chevron-down"></i></summary>
+                <div class="events-history__grid">
+                    <article><strong>2017 · 8.º Congresso Florestal Nacional Português</strong><span>Monitoring cork oak woodlands through remote sensing: Multispectral data upscaling. Viana do Castelo, Portugal.</span></article>
+                    <article><strong>2015 · EPPN Plant Phenotyping Symposium</strong><span>High-throughput field phenotyping of apple tree response to drought by UAV thermal imaging. Barcelona, España.</span></article>
+                    <article><strong>2015 · GeoUAV – ISPRS Geospatial Week</strong><span>Accuracy test of a miniaturized thermal infrared camera to be carried on board UAVs. La Grande-Motte, Francia.</span></article>
+                    <article><strong>2015 · VIII International Symposium on Irrigation of Horticultural Crops</strong><span>Water Stress Assessment at Tree Scale: High-Resolution Thermal UAV Imagery Acquisition and Processing. Lleida, España.</span></article>
+                    <article><strong>2014 · Plant Biology Europe FESPB/EPSO Congress</strong><span>UAV thermal imagery for high-throughput field phenotyping of apple tree hybrid populations. Dublín, Irlanda.</span></article>
+                    <article><strong>2014 · International Horticultural Congress</strong><span>Contribución de imágenes térmicas de alta resolución al fenotipado de manzano bajo restricciones hídricas. Brisbane, Australia.</span></article>
+                    <article><strong>2013 · European Conference on Precision Agriculture</strong><span>Accuracy and crop line misalignment over high-resolution UAV orthomosaics. Lleida, España.</span></article>
+                    <article><strong>2012 · RHEA International Congress on Robotics</strong><span>Automatic mosaicking of very high spatial resolution UAV multispectral images for precision agriculture. Pisa, Italia.</span></article>
+                    <article><strong>2008–2011 · Precision Agriculture Conferences</strong><span>Contribuciones sobre imágenes remotas, detección de malas hierbas y agricultura de precisión en Denver, Wageningen, Évora y Praga.</span></article>
+                </div>
+            </details>
+        </section>
+
+        <section class="outreach-invite">
+            <div>
+                <span class="outreach-kicker">COLABORACIONES Y ACTIVIDADES</span>
+                <h2>¿Organizas una charla, jornada o exposición?</h2>
+                <p>David participa en actividades de divulgación relacionadas con agricultura digital, teledetección y tecnologías aplicadas al sector agroalimentario.</p>
+            </div>
+            <a href="contacto.html">Contactar <i data-lucide="arrow-up-right"></i></a>
+        </section>
+    </main>
+
+    <footer><div class="container"><p>© 2026 David Gómez Candón · Estación Experimental de Aula Dei (EEAD-CSIC)</p></div></footer>
+    <script>lucide.createIcons();</script>
 </body>
-
 </html>

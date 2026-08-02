@@ -23,6 +23,7 @@
     <!-- Hoja de estilos -->
     <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/responsive.css">
+<link rel="stylesheet" href="css/home-pro.css">
 </head>
 
 <body>
@@ -45,16 +46,16 @@ HEADER
 
         </div>
 
-        <button class="menu-toggle" aria-label="Abrir menú">
+        <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu">
             ☰
         </button>
 
         <nav id="menu">
 
-            <a href="#inicio">Inicio</a>
+            <a href="#inicio" class="is-active">Inicio</a>
             <a href="#sobre">Sobre mí</a>
             <a href="#investigacion">Investigación</a>
-            <a href="#publicaciones">Publicaciones</a>
+            <a href="publicaciones.html">Publicaciones</a>
             <a href="divulgacion.html">Divulgación</a>
            <a href="laboratorio.html">Laboratorio Virtual</a>
             <a href="contacto.html">Contacto</a>
@@ -576,6 +577,10 @@ PUBLICACIONES
 
         </article>
 
+    </div>
+
+    <div class="publicaciones-cta">
+        <a href="publicaciones.html">Ver todas las publicaciones <i class="bi bi-arrow-right"></i></a>
     </div>
 
 </section>
