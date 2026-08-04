@@ -200,15 +200,25 @@ HERO
 
     overflow:hidden;
 
+    background:var(--blue);
+
 }
 
 .hero img{
 
-    width:100%;
+    position:absolute;
+
+    top:0;
+
+    right:0;
+
+    width:58%;
 
     height:100%;
 
     object-fit:cover;
+
+    object-position:center 58%;
 
     display:block;
 
@@ -220,18 +230,13 @@ HERO
 
     inset:0;
 
-    background:
-
-    linear-gradient(
-
+    background:linear-gradient(
         90deg,
-
-        rgba(8,32,58,.82),
-
-        rgba(8,32,58,.38),
-
-        rgba(8,32,58,.08)
-
+        var(--blue) 0%,
+        var(--blue) 38%,
+        rgba(8,32,58,.92) 48%,
+        rgba(8,32,58,.38) 66%,
+        rgba(8,32,58,.06) 100%
     );
 
 }
@@ -248,7 +253,7 @@ HERO
 
     color:white;
 
-    max-width:650px;
+    max-width:590px;
 
 }
 
@@ -978,6 +983,20 @@ footer{
     .hero{
 
         min-height:650px;
+
+    }
+
+    .hero img{
+
+        width:100%;
+
+        object-position:center 58%;
+
+    }
+
+    .overlay{
+
+        background:linear-gradient(90deg,rgba(8,32,58,.86),rgba(8,32,58,.62));
 
     }
 
