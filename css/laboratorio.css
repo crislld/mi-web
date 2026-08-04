@@ -637,3 +637,19 @@ MÓVIL PEQUEÑO
     }
 
 }
+
+/*======================================
+SIMULADOR DE DRON
+======================================*/
+
+.simulator .card-bg{
+
+    background:
+    linear-gradient(
+        rgba(7,29,58,.15),
+        rgba(7,29,58,.72)
+    ),
+    url("../img/laboratorio/campo-rgb-simulado.png")
+    center/cover no-repeat;
+
+}

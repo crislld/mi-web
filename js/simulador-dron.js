@@ -87,3 +87,30 @@ simTouch.querySelectorAll('[data-touch]').forEach(button => {
   button.addEventListener('pointercancel', event => set(false, event));
   button.addEventListener('pointerleave', event => set(false, event));
 });
+
+// Capas reales del ensayo: NDVI y temperatura. La RGB es una reconstrucción visual generada
+// a partir de la geometría del mismo campo, por lo que se identifica como simulada en la interfaz.
+const simCameraAssets = {
+  rgb: { file:'campo-rgb-simulado.png', tag:'RGB · ORTOMOSAICO SIMULADO · 20 MP' },
+  ndvi: { file:'campo-ndvi-real.png', tag:'NDVI REAL · MAPA DE VIGOR' },
+  thermal: { file:'campo-termica-real.png', tag:'TÉRMICA REAL · TEMPERATURA DE CUBIERTA' }
+};
+const simCameraStyle = document.createElement('style');
+simCameraStyle.textContent = '#stage.uses-camera-image .spectral{display:none!important}#stage.uses-camera-image .field{filter:none!important;background-position:center center!important;background-size:contain!important;background-repeat:no-repeat!important;background-color:#fff!important}';
+document.head.append(simCameraStyle);
+function simApplyCameraImage() {
+  const asset = simCameraAssets[simMode];
+  simStage.classList.add('uses-camera-image');
+  simField.style.backgroundImage = `url('img/laboratorio/${asset.file}')`;
+  simQ('#cameraTag').textContent = asset.tag;
+}
+const simBaseReset = simReset;
+simReset = function () { simBaseReset(); simApplyCameraImage(); };
+document.querySelectorAll('[data-mode]').forEach(button => button.onclick = () => {
+  simMode = button.dataset.mode;
+  document.querySelectorAll('[data-mode]').forEach(item => item.classList.toggle('active', item === button));
+  simStage.className = 'stage ' + simMode;
+  simReset();
+  simQ('#log').textContent = 'Capa ' + button.textContent.trim().toUpperCase() + ' preparada. Nueva adquisición iniciada…';
+});
+simApplyCameraImage();

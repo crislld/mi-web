@@ -24,6 +24,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/laboratorio.css">
+    <link rel="stylesheet" href="css/simulador-embed.css">
     <link rel="stylesheet" href="css/responsive.css">
 
 </head>
@@ -189,6 +190,33 @@ JUEGO
 
 </article>
 
+<!-- ===========================
+SIMULADOR DE DRON
+=========================== -->
+
+<article class="lab-card simulator">
+
+    <div class="card-bg"></div>
+
+    <div class="card-content">
+
+        <span class="card-label">SIMULADOR CIENTÍFICO</span>
+
+        <h3>Vuelo y teledetección</h3>
+
+        <p>
+            Pilota un dron sobre el ensayo y compara las capas RGB, NDVI
+            y térmica para registrar datos de las parcelas.
+        </p>
+
+        <a href="simulador-dron.html" class="card-button">
+            Abrir simulador <i class="bi bi-arrow-up-right"></i>
+        </a>
+
+    </div>
+
+</article>
+
 </div>
 
 </div>
@@ -198,6 +226,32 @@ JUEGO
 <!-- =====================================================
 TECNOLOGÍAS
 ===================================================== -->
+
+<!-- =====================================================
+SIMULADOR INTEGRADO
+===================================================== -->
+
+<section id="simulador" class="lab-simulator">
+
+    <div class="container">
+
+        <div class="titulo-seccion">
+            <h2>Simulador de vuelo científico</h2>
+            <div class="linea-seccion"></div>
+        </div>
+
+        <p class="simulator-intro">
+            Planifica una misión, pilota el dron y compara las capas RGB,
+            NDVI y térmica del ensayo directamente desde el Laboratorio.
+        </p>
+
+        <div class="simulator-frame">
+            <iframe src="simulador-dron.html" title="Simulador de vuelo y teledetección" loading="lazy" allow="fullscreen"></iframe>
+        </div>
+
+    </div>
+
+</section>
 
 <section id="tecnologias" class="lab-tech">
 
