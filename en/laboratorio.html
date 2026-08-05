@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Laboratorio Virtual | David Gómez Candón</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Lucide -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/laboratorio.css">
+    <link rel="stylesheet" href="css/simulador-embed.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+<script src="../js/lang-en.js" defer></script>
+</head>
+
+<body>
+
+<!-- =====================================================
+HEADER
+===================================================== -->
+
+<header>
+
+    <div class="container">
+
+        <div class="logo">
+
+            <div class="logo-dg">
+                DG
+            </div>
+
+            <div class="logo-texto">
+                DAVID GÓMEZ CANDÓN
+            </div>
+
+        </div>
+
+        <button class="menu-toggle" aria-label="Abrir menú">
+            ☰
+        </button>
+
+        <nav id="menu">
+
+            <a href="index.html">Inicio</a>
+            <a href="index.html#sobre">Sobre mí</a>
+            <a href="investigacion.html">Investigación</a>
+            <a href="index.html#publicaciones">Publicaciones</a>
+            <a href="divulgacion.html">Divulgación</a>
+            <a href="laboratorio.html" class="activo">Laboratorio Virtual</a>
+            <a href="contacto.html">Contacto</a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+<!-- =====================================================
+HERO
+===================================================== -->
+
+<section class="lab-hero">
+
+    <div class="lab-overlay"></div>
+
+    <div class="lab-content">
+
+        <span class="lab-tag">
+
+            LABORATORIO DIGITAL
+
+        </span>
+
+        <h1>
+
+            Donde la investigación<br>
+
+            <span>cobra vida</span>
+
+        </h1>
+
+        <p>
+
+            Explora herramientas desarrolladas para divulgar la investigación
+            en agricultura de precisión, teledetección, inteligencia artificial
+            y análisis avanzado de cultivos.
+
+        </p>
+
+        <div class="lab-buttons">
+
+            <a href="#herramientas" class="hero-btn">
+
+                Comenzar
+
+            </a>
+
+            <a href="#tecnologias" class="hero-btn hero-btn-outline">
+
+                Descubrir
+
+            </a>
+
+        </div>
+
+    </div>
+
+    <div class="scroll-indicator">
+
+        <i class="bi bi-chevron-double-down"></i>
+
+    </div>
+
+</section>
+
+<!-- =====================================================
+HERRAMIENTAS
+===================================================== -->
+
+<section id="herramientas" class="lab-tools">
+
+<div class="container">
+
+<div class="titulo-seccion">
+
+<h2>Experiencias Interactivas</h2>
+
+<div class="linea-seccion"></div>
+
+</div>
+
+<p class="lab-intro">
+
+La investigación también puede experimentarse.
+Descubre herramientas creadas para acercar la ciencia,
+la inteligencia artificial y la agricultura de precisión
+a investigadores, estudiantes y profesionales.
+
+</p>
+
+<div class="lab-grid">
+    <!-- ===========================
+DAVID IA
+=========================== -->
+
+<article class="lab-card ia">
+
+    <div class="card-bg"></div>
+
+<div class="card-content">
+
+    <a href="https://david-agri-tech.base44.app/" class="card-button" target="_blank" rel="noopener noreferrer">
+    Hablar con David
+</a>
+</div>
+
+</article>
+
+<!-- ===========================
+JUEGO
+=========================== -->
+
+<article class="lab-card game">
+
+    <div class="card-bg"></div>
+
+<div class="card-content">
+
+    <a href="https://davidgomezcandon.base44.app/" class="card-button" target="_blank" rel="noopener">
+    Comenzar experiencia
+</a>
+
+</div>
+
+</article>
+
+<!-- ===========================
+SIMULADOR DE DRON
+=========================== -->
+
+<article class="lab-card simulator">
+
+    <div class="card-bg"></div>
+
+    <div class="card-content">
+
+        <span class="card-label">SIMULADOR CIENTÍFICO</span>
+
+        <h3>Vuelo y teledetección</h3>
+
+        <p>
+            Pilota un dron sobre el ensayo y compara las capas RGB, NDVI
+            y térmica para registrar datos de las parcelas.
+        </p>
+
+        <a href="simulador-dron.html" class="card-button">
+            Abrir simulador <i class="bi bi-arrow-up-right"></i>
+        </a>
+
+    </div>
+
+</article>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =====================================================
+TECNOLOGÍAS
+===================================================== -->
+
+<!-- =====================================================
+SIMULADOR INTEGRADO
+===================================================== -->
+
+<section id="simulador" class="lab-simulator">
+
+    <div class="container">
+
+        <div class="titulo-seccion">
+            <h2>Simulador de vuelo científico</h2>
+            <div class="linea-seccion"></div>
+        </div>
+
+        <p class="simulator-intro">
+            Planifica una misión, pilota el dron y compara las capas RGB,
+            NDVI y térmica del ensayo directamente desde el Laboratorio.
+        </p>
+
+        <div class="simulator-frame">
+            <iframe src="simulador-dron.html" title="Simulador de vuelo y teledetección" loading="lazy" allow="fullscreen"></iframe>
+        </div>
+
+    </div>
+
+</section>
+
+<section id="tecnologias" class="lab-tech">
+
+<div class="container">
+
+<div class="titulo-seccion">
+
+<h2>Tecnologías utilizadas</h2>
+
+<div class="linea-seccion"></div>
+
+</div>
+
+<div class="tech-grid">

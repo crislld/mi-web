@@ -1,0 +1,51 @@
+/* Acabado editorial para la página de trayectoria científica */
+:root { --cv-navy:#091d36; --cv-blue:#223e60; --cv-gold:#c69b31; --cv-sand:#f5f3ee; --cv-line:#d9e0e7; --cv-copy:#536981; }
+
+body { background:#fbfcfa; color:var(--cv-navy); }
+header { background:var(--cv-navy); box-shadow:0 4px 18px rgba(9,29,54,.15); }
+nav a.activo { color:#fff; position:relative; }
+nav a.activo::after { content:""; position:absolute; right:0; bottom:-9px; left:0; height:2px; background:var(--cv-gold); }
+
+.cv-hero { min-height:70vh; background:linear-gradient(90deg,rgba(6,23,43,.92),rgba(9,29,54,.68)),url("../img/contacto/hero.jpg") center/cover no-repeat; }
+.cv-hero h1 { letter-spacing:-.045em; }
+.hero-tag { border-radius:0; color:#fff; border-color:rgba(255,255,255,.42); }
+.hero-line { width:64px; height:3px; background:var(--cv-gold); }
+
+.section-tag { color:var(--cv-gold); font-size:.72rem; font-weight:700; letter-spacing:.15em; }
+.section-header h2 { color:var(--cv-navy); letter-spacing:-.035em; }
+.section-header p, .profile-content p, .career-text p { color:var(--cv-copy); }
+
+.cv-profile, .career-intro, .research-centers, .career, .cv-highlights, .cv-projects, .cv-achievements { padding-block:100px; }
+.profile-image::before { content:""; position:absolute; inset:18px -16px -16px 18px; z-index:-1; border:1px solid var(--cv-gold); }
+.profile-image img { border-radius:0; }
+.profile-content h2 { color:var(--cv-navy); letter-spacing:-.04em; }
+.profile-content h3 { color:var(--cv-blue); }
+
+.center-card, .highlight-card, .project-card, .achievement-card { border-radius:0; border:1px solid var(--cv-line); box-shadow:none; }
+.center-card:hover, .highlight-card:hover, .project-card:hover, .achievement-card:hover { border-color:rgba(198,155,49,.65); box-shadow:0 18px 30px rgba(9,29,54,.09); }
+.center-card span, .project-type { color:#a77d20; }
+.highlight-icon { width:56px; height:56px; border-radius:0; background:var(--cv-navy); }
+.highlight-icon svg { width:26px; height:26px; }
+.project-card { border-top:3px solid var(--cv-gold); }
+.career-line { background:var(--cv-gold); height:2px; }
+.career-icon { width:66px; height:66px; border-width:2px; box-shadow:none; }
+.career-year { color:#a77d20; }
+
+/* Descarga: diseñada como cierre de página y llamada a la acción principal */
+.cv-download { padding:100px 0; background:var(--cv-sand); }
+.cv-download .container { width:min(1120px,92%); margin:auto; }
+.download-box { position:relative; display:grid; grid-template-columns:auto minmax(0,1fr) auto; align-items:center; gap:34px; padding:48px 54px; overflow:hidden; background:var(--cv-navy); color:#fff; box-shadow:18px 18px 0 var(--cv-gold); }
+.download-box::after { content:""; position:absolute; width:360px; height:360px; top:-250px; right:-130px; border:1px solid rgba(255,255,255,.13); border-radius:50%; }
+.download-icon { display:grid; width:72px; height:72px; place-items:center; border:1px solid rgba(255,255,255,.35); color:var(--cv-gold); }
+.download-icon svg { width:31px; height:31px; stroke-width:1.45; }
+.download-box .section-tag { grid-column:2; margin:0 0 -21px; color:#e0bd69; }
+.download-box h2 { grid-column:2; margin:0; font-family:"Playfair Display",serif; font-size:clamp(2rem,3.5vw,3rem); line-height:1.06; letter-spacing:-.035em; }
+.download-box p { grid-column:2; margin:0; max-width:560px; color:rgba(255,255,255,.77); line-height:1.7; }
+.download-meta { grid-column:2; color:#d5dfeb; font-size:.77rem; font-weight:600; letter-spacing:.08em; text-transform:uppercase; }
+.cv-download-button { grid-column:3; grid-row:1 / span 4; position:relative; z-index:1; display:inline-flex; align-items:center; justify-content:center; gap:11px; min-width:258px; padding:17px 21px; background:var(--cv-gold); color:var(--cv-navy); text-decoration:none; font-size:.88rem; font-weight:800; letter-spacing:.015em; transition:transform .2s ease,background .2s ease,box-shadow .2s ease; }
+.cv-download-button svg { width:19px; height:19px; stroke-width:2.5; }
+.cv-download-button:hover { background:#e0bd69; box-shadow:0 10px 24px rgba(0,0,0,.24); transform:translateY(-3px); }
+.cv-download-button:focus-visible { outline:3px solid #fff; outline-offset:4px; }
+
+@media (max-width:800px) { .cv-profile,.career-intro,.research-centers,.career,.cv-highlights,.cv-projects,.cv-achievements,.cv-download { padding-block:70px; } .download-box { grid-template-columns:auto 1fr; gap:20px; padding:38px 28px; box-shadow:10px 10px 0 var(--cv-gold); } .download-box .section-tag,.download-box h2,.download-box p,.download-meta { grid-column:2; } .cv-download-button { grid-column:1 / -1; grid-row:auto; width:100%; } }
+@media (max-width:480px) { .download-box { grid-template-columns:1fr; padding:32px 23px; } .download-icon,.download-box .section-tag,.download-box h2,.download-box p,.download-meta { grid-column:1; } .download-box .section-tag { margin:0; } .download-icon { width:54px; height:54px; } }

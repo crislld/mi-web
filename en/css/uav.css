@@ -1,0 +1,1110 @@
+/*==================================================
+        DAVID GÓMEZ CANDÓN
+        PLATAFORMAS UAV
+==================================================*/
+
+
+/*=========================
+        RESET
+=========================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Inter',sans-serif;
+
+    background:#ffffff;
+
+    color:#2d3748;
+
+    overflow-x:hidden;
+
+    line-height:1.9;
+
+}
+
+
+/*=========================
+      VARIABLES
+=========================*/
+
+:root{
+
+    --blue:#08203A;
+
+    --blue-light:#12365D;
+
+    --gold:#C9A227;
+
+    --white:#ffffff;
+
+    --light:#f8f9fb;
+
+    --text:#3b4b5b;
+
+    --radius:20px;
+
+    --shadow:0 18px 45px rgba(0,0,0,.12);
+
+}
+
+
+/*=========================
+      CONTENEDORES
+=========================*/
+
+.container{
+
+    width:min(92%,1240px);
+
+    margin:auto;
+
+}
+
+.container-small{
+
+    width:min(88%,900px);
+
+    margin:auto;
+
+}
+
+
+/*=========================
+        HEADER
+=========================*/
+
+header{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:80px;
+
+    background:rgba(8,32,58,.96);
+
+    backdrop-filter:blur(12px);
+
+    z-index:9999;
+
+}
+
+header .container{
+
+    height:100%;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:16px;
+
+}
+
+.logo-dg{
+
+    font-family:'Playfair Display',serif;
+
+    color:white;
+
+    font-size:2rem;
+
+}
+
+.logo-texto{
+
+    color:white;
+
+    letter-spacing:2px;
+
+    font-size:.92rem;
+
+}
+
+.menu-linea{
+
+    color:white;
+
+}
+
+.titulo-linea-menu{
+
+    letter-spacing:2px;
+
+    font-size:.9rem;
+
+}
+
+
+/*=========================
+          HERO
+=========================*/
+
+.hero{
+
+    position:relative;
+
+    height:92vh;
+
+    min-height:760px;
+
+    overflow:hidden;
+
+}
+
+.hero-image{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    display:block;
+
+}
+
+.hero-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+    linear-gradient(
+
+        rgba(8,32,58,.55),
+
+        rgba(8,32,58,.38)
+
+    );
+
+}
+
+.hero-content{
+
+    position:absolute;
+
+    inset:0;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    color:white;
+
+    z-index:5;
+
+    padding:30px;
+
+}
+
+.hero-kicker{
+
+    letter-spacing:5px;
+
+    text-transform:uppercase;
+
+    font-size:.75rem;
+
+    border:1px solid rgba(255,255,255,.35);
+
+    padding:10px 22px;
+
+    border-radius:50px;
+
+    backdrop-filter:blur(8px);
+
+    margin-bottom:35px;
+
+}
+
+.hero h1{
+
+    font-family:'Playfair Display',serif;
+
+    font-size:clamp(4rem,7vw,6.2rem);
+
+    font-weight:600;
+
+    line-height:1.1;
+
+}
+
+.hero-line{
+
+    width:130px;
+
+    height:3px;
+
+    background:var(--gold);
+
+    margin:38px auto;
+
+}
+
+.hero p{
+
+    max-width:760px;
+
+    font-size:1.35rem;
+
+    line-height:1.8;
+
+}
+
+
+/*=========================
+      ESTILO GENERAL
+=========================*/
+
+section{
+
+    padding:120px 0;
+
+}
+
+.section-kicker{
+
+    display:block;
+
+    text-transform:uppercase;
+
+    letter-spacing:4px;
+
+    color:var(--gold);
+
+    font-size:.82rem;
+
+    font-weight:700;
+
+    margin-bottom:22px;
+
+}
+
+.gold-line{
+
+    width:110px;
+
+    height:3px;
+
+    background:var(--gold);
+
+    margin:30px 0 50px;
+
+}
+
+h2{
+
+    font-family:'Playfair Display',serif;
+
+    color:var(--blue);
+
+    font-size:clamp(2.3rem,4vw,3.6rem);
+
+    line-height:1.2;
+
+}
+/*==================================================
+                INTRODUCCIÓN
+==================================================*/
+
+.intro{
+
+    background:var(--white);
+
+}
+
+.intro h2{
+
+    max-width:780px;
+
+}
+
+.intro p{
+
+    font-size:1.15rem;
+
+    color:var(--text);
+
+    margin-bottom:30px;
+
+    text-align:justify;
+
+}
+
+.intro p:last-child{
+
+    margin-bottom:0;
+
+}
+
+
+/*==================================================
+            FOTOGRAFÍA DESTACADA
+==================================================*/
+
+.feature-image{
+
+    padding:40px 0 140px;
+
+    background:var(--white);
+
+}
+
+.feature-image img{
+
+    width:min(94%,1500px);
+
+    height:72vh;
+
+    min-height:520px;
+
+    object-fit:cover;
+
+    display:block;
+
+    margin:auto;
+
+    border-radius:26px;
+
+    box-shadow:var(--shadow);
+
+}
+
+.caption{
+
+    width:min(86%,900px);
+
+    margin:30px auto 0;
+
+    font-size:.95rem;
+
+    color:#6B7280;
+
+    line-height:1.9;
+
+}
+
+.caption span{
+
+    color:var(--blue);
+
+    font-weight:700;
+
+}
+
+
+/*==================================================
+        BLOQUE EDITORIAL
+==================================================*/
+
+.editorial{
+
+    width:min(92%,1280px);
+
+    margin:0 auto;
+
+    display:grid;
+
+    grid-template-columns:1.5fr .9fr;
+
+    gap:100px;
+
+    align-items:start;
+
+    padding:120px 0;
+
+}
+
+.editorial-left h2{
+
+    max-width:700px;
+
+}
+
+.editorial-left p{
+
+    font-size:1.08rem;
+
+    color:var(--text);
+
+    margin-bottom:28px;
+
+    text-align:justify;
+
+}
+
+.editorial-left p:last-child{
+
+    margin-bottom:0;
+
+}
+
+
+/*==================================================
+                VENTAJAS
+==================================================*/
+
+.editorial-right{
+
+    position:sticky;
+
+    top:120px;
+
+}
+
+.advantage{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:22px;
+
+    padding:28px 0;
+
+    border-bottom:1px solid #E5E7EB;
+
+}
+
+.advantage:last-child{
+
+    border-bottom:none;
+
+}
+
+.advantage svg{
+
+    width:34px;
+
+    height:34px;
+
+    color:var(--gold);
+
+    flex-shrink:0;
+
+    margin-top:4px;
+
+}
+
+.advantage h3{
+
+    font-family:'Playfair Display',serif;
+
+    color:var(--blue);
+
+    font-size:1.25rem;
+
+    margin-bottom:10px;
+
+}
+
+.advantage p{
+
+    color:#6B7280;
+
+    line-height:1.8;
+
+    font-size:.97rem;
+
+}
+/*==================================================
+            SENSORES CIENTÍFICOS
+==================================================*/
+
+.sensors{
+
+    background:var(--light);
+
+}
+
+.sensors .container{
+
+    max-width:1250px;
+
+}
+
+.sensors h2{
+
+    max-width:700px;
+
+}
+
+.sensor-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:35px;
+
+    margin-top:70px;
+
+}
+
+.sensor-grid article{
+
+    background:white;
+
+    padding:45px 35px;
+
+    border-radius:22px;
+
+    text-align:center;
+
+    transition:.35s;
+
+    box-shadow:0 12px 35px rgba(0,0,0,.06);
+
+}
+
+.sensor-grid article:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 20px 50px rgba(0,0,0,.12);
+
+}
+
+.sensor-grid svg{
+
+    width:56px;
+
+    height:56px;
+
+    color:var(--gold);
+
+    margin-bottom:25px;
+
+}
+
+.sensor-grid h3{
+
+    font-family:'Playfair Display',serif;
+
+    color:var(--blue);
+
+    font-size:1.35rem;
+
+    margin-bottom:15px;
+
+}
+
+.sensor-grid p{
+
+    color:var(--text);
+
+    font-size:.97rem;
+
+    line-height:1.9;
+
+}
+
+
+/*==================================================
+            IMAGEN CIENTÍFICA
+==================================================*/
+
+.scientific-image{
+
+    background:white;
+
+    padding:140px 0;
+
+}
+
+.scientific-image img{
+
+    width:min(94%,1500px);
+
+    height:72vh;
+
+    min-height:520px;
+
+    display:block;
+
+    margin:auto;
+
+    object-fit:cover;
+
+    border-radius:24px;
+
+    box-shadow:var(--shadow);
+
+}
+
+.scientific-image .caption{
+
+    width:min(88%,900px);
+
+    margin:35px auto 0;
+
+}
+
+
+/*==================================================
+                APLICACIONES
+==================================================*/
+
+.applications{
+
+    background:var(--light);
+
+    padding:140px 0;
+
+}
+
+.application{
+
+    width:min(92%,1300px);
+
+    margin:110px auto;
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:80px;
+
+    align-items:center;
+
+}
+
+.application:first-of-type{
+
+    margin-top:80px;
+
+}
+
+.application.reverse{
+
+    direction:rtl;
+
+}
+
+.application.reverse>*{
+
+    direction:ltr;
+
+}
+
+.application-image img{
+
+    width:100%;
+
+    height:480px;
+
+    object-fit:cover;
+
+    border-radius:24px;
+
+    box-shadow:var(--shadow);
+
+}
+
+.application-text h3{
+
+    font-family:'Playfair Display',serif;
+
+    color:var(--blue);
+
+    font-size:2rem;
+
+    margin-bottom:25px;
+
+}
+
+.application-text p{
+
+    color:var(--text);
+
+    font-size:1.08rem;
+
+    line-height:2;
+
+}
+
+
+/*==================================================
+                CITA FINAL
+==================================================*/
+
+.closing{
+
+    background:var(--blue);
+
+    color:white;
+
+    text-align:center;
+
+    padding:150px 0;
+
+}
+
+.closing blockquote{
+
+    max-width:900px;
+
+    margin:auto;
+
+    font-family:'Playfair Display',serif;
+
+    font-size:2.1rem;
+
+    line-height:1.7;
+
+    font-style:italic;
+
+    position:relative;
+
+}
+
+.closing blockquote::before{
+
+    content:"“";
+
+    position:absolute;
+
+    left:-40px;
+
+    top:-40px;
+
+    font-size:7rem;
+
+    color:rgba(201,162,39,.35);
+
+    font-family:'Playfair Display',serif;
+
+}
+/*==================================================
+                BOTÓN VOLVER
+==================================================*/
+
+.back-section{
+
+    background:white;
+
+    padding:110px 0;
+
+    text-align:center;
+
+}
+
+.back-button{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    padding:20px 42px;
+
+    background:var(--blue);
+
+    color:white;
+
+    text-decoration:none;
+
+    border-radius:60px;
+
+    transition:.35s;
+
+    font-weight:600;
+
+    letter-spacing:.5px;
+
+    box-shadow:0 15px 35px rgba(8,32,58,.18);
+
+}
+
+.back-button:hover{
+
+    background:var(--gold);
+
+    color:var(--blue);
+
+    transform:translateY(-5px);
+
+}
+
+.back-button svg{
+
+    width:22px;
+
+    height:22px;
+
+}
+
+
+/*==================================================
+                    FOOTER
+==================================================*/
+
+footer{
+
+    background:var(--blue);
+
+    color:white;
+
+    padding:60px 0;
+
+}
+
+.footer-content{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:40px;
+
+}
+
+.footer-content h3{
+
+    font-family:'Playfair Display',serif;
+
+    font-size:1.6rem;
+
+    margin-bottom:10px;
+
+}
+
+.footer-content p{
+
+    opacity:.85;
+
+}
+
+
+/*==================================================
+                EFECTOS
+==================================================*/
+
+.feature-image img,
+.scientific-image img,
+.application-image img{
+
+    transition:.45s;
+
+}
+
+.feature-image img:hover,
+.scientific-image img:hover,
+.application-image img:hover{
+
+    transform:scale(1.02);
+
+}
+
+.sensor-grid article{
+
+    transition:.35s;
+
+}
+
+
+/*==================================================
+                RESPONSIVE
+==================================================*/
+
+@media(max-width:1200px){
+
+    .sensor-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+    .application{
+
+        gap:50px;
+
+    }
+
+}
+
+
+@media(max-width:992px){
+
+    .editorial{
+
+        grid-template-columns:1fr;
+
+        gap:70px;
+
+    }
+
+    .editorial-right{
+
+        position:static;
+
+    }
+
+    .application{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .application.reverse{
+
+        direction:ltr;
+
+    }
+
+    .application-image{
+
+        order:-1;
+
+    }
+
+}
+
+
+@media(max-width:768px){
+
+    header{
+
+        height:70px;
+
+    }
+
+    .logo-texto{
+
+        display:none;
+
+    }
+
+    .hero{
+
+        min-height:520px;
+
+        height:75vh;
+
+    }
+
+    .hero h1{
+
+        font-size:3rem;
+
+    }
+
+    .hero p{
+
+        font-size:1.05rem;
+
+    }
+
+    section{
+
+        padding:90px 0;
+
+    }
+
+    .feature-image img,
+    .scientific-image img{
+
+        height:420px;
+
+    }
+
+    .sensor-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .application-image img{
+
+        height:360px;
+
+    }
+
+    .application-text h3{
+
+        font-size:1.8rem;
+
+    }
+
+    .closing blockquote{
+
+        font-size:1.5rem;
+
+    }
+
+    .footer-content{
+
+        flex-direction:column;
+
+        text-align:center;
+
+    }
+
+}
+
+
+@media(max-width:500px){
+
+    .hero{
+
+        min-height:450px;
+
+    }
+
+    .hero h1{
+
+        font-size:2.3rem;
+
+    }
+
+    .hero-line{
+
+        width:90px;
+
+    }
+
+    .back-button{
+
+        width:100%;
+
+        justify-content:center;
+
+    }
+
+}

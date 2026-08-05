@@ -1,0 +1,67 @@
+/* Portada editorial: mejora visual de la página de inicio */
+:root { --ink:#091d36; --ink-soft:#213c5e; --gold:#c69b31; --paper:#f7f8f6; --muted:#58708d; --rule:#dce3e9; }
+body { background:var(--paper); color:var(--ink); padding-top:80px; }
+header { height:80px; background:rgba(9,29,54,.98); box-shadow:0 4px 22px rgba(5,18,35,.16); }
+header .container { height:80px; }
+.logo { gap:9px; }
+.logo-dg { font-size:2.15rem; line-height:1; }
+.logo-texto { font-size:.82rem; font-weight:600; letter-spacing:.19em; white-space:nowrap; }
+nav { gap:clamp(18px,2.1vw,34px); }
+nav a { position:relative; padding:29px 0 27px; color:#f9fbff; font-size:.77rem; font-weight:600; letter-spacing:.055em; }
+nav a::after { content:""; position:absolute; right:0; bottom:20px; left:0; height:2px; background:var(--gold); transform:scaleX(0); transform-origin:left; transition:transform .22s ease; }
+nav a:hover::after, nav a.is-active::after { transform:scaleX(1); }
+nav a:hover, nav a.is-active { color:#fff; }
+section { width:min(90%,1260px); }
+.hero { position:relative; grid-template-columns:minmax(310px,.86fr) minmax(0,1.25fr); gap:clamp(44px,7vw,104px); min-height:690px; padding:68px 4.5vw 64px; background:#fff; overflow:hidden; }
+.hero::before { content:""; position:absolute; width:420px; height:420px; top:-270px; right:-170px; border-radius:50%; background:#edf2ee; }
+.hero-foto { position:relative; z-index:1; align-self:stretch; }
+.hero-foto::before { content:""; position:absolute; inset:24px -18px -18px 20px; border:1px solid rgba(198,155,49,.6); z-index:-1; }
+.hero-foto img { width:100%; max-width:440px; height:100%; max-height:546px; object-fit:cover; object-position:center top; box-shadow:18px 22px 44px rgba(9,29,54,.13); }
+.hero-info { position:relative; z-index:1; max-width:690px; }
+.hero-info h1 { max-width:650px; font-size:clamp(3.15rem,5.15vw,5.2rem); letter-spacing:-.052em; line-height:.98; margin-bottom:26px; }
+.linea { width:88px; height:4px; margin:0 0 30px; background:var(--gold); }
+.hero-info h3 { color:var(--ink-soft); font-size:.82rem; letter-spacing:.19em; margin-bottom:22px; }
+.hero-info p { max-width:645px; color:#415671; font-size:1.08rem; line-height:1.85; margin-bottom:29px; }
+.datos { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px; margin:0 0 34px; }
+.dato { min-height:74px; padding:13px 14px; color:var(--ink-soft); font-size:.88rem; line-height:1.48; border-top:1px solid var(--rule); }
+.hero-btn { padding:15px 25px; border-radius:0; background:var(--ink); font-size:.9rem; box-shadow:0 10px 22px rgba(9,29,54,.15); }
+.hero-btn:hover { background:var(--gold); color:var(--ink); transform:translateY(-3px); }
+.sobre,.investigacion,.publicaciones { padding:106px 0; margin:0 auto; }
+.titulo-seccion { margin-bottom:48px; }
+.titulo-seccion h2 { font-size:clamp(2.35rem,3.5vw,3.55rem); letter-spacing:-.04em; }
+.linea-seccion { width:56px; background:var(--gold); }
+.sobre-contenedor { grid-template-columns:minmax(0,1.1fr) minmax(300px,.9fr); gap:clamp(44px,8vw,112px); }
+.sobre-texto { padding-right:14px; }
+.sobre-texto p { font-size:1.08rem; color:#415671; line-height:1.9; }
+.btn.btn-primary,.boton-cv { display:inline-block; margin-top:10px; padding:13px 21px; border:1px solid var(--ink); border-radius:0; color:var(--ink); text-decoration:none; font-size:.9rem; font-weight:700; }
+.btn.btn-primary:hover,.boton-cv:hover { background:var(--ink); color:#fff; }
+.sobre-info { border-left:1px solid var(--gold); padding-left:clamp(28px,4vw,55px); }
+.info-item { gap:18px; margin-bottom:27px; }
+.info-item .icono { color:var(--gold); font-size:1.24rem; width:26px; text-align:center; }
+.info-item h3 { margin-bottom:3px; font-size:1rem; letter-spacing:.02em; }
+.info-item p { color:#58708d; font-size:.92rem; }
+.investigacion { width:100%; padding-inline:max(5%,calc((100% - 1260px)/2)); background:#edf2ee; }
+.research-intro { max-width:760px; margin-bottom:46px; color:#415671; }
+.investigacion-grid { grid-template-columns:repeat(3,1fr); gap:18px; margin-top:0; }
+.invest-card { min-height:282px; padding:29px; border:0; border-radius:0; background:#fff; box-shadow:0 1px 0 rgba(9,29,54,.04); }
+.invest-card:hover { transform:translateY(-6px); box-shadow:0 16px 28px rgba(9,29,54,.12); }
+.research-icon { width:43px; height:43px; display:grid; place-items:center; margin-bottom:24px; color:var(--gold); border:1px solid #e2cfa0; }
+.research-icon svg { width:21px; }
+.card-category { color:#657a91; font-size:.66rem; letter-spacing:.13em; }
+.invest-card h3 { margin:8px 0 10px; font-size:1.27rem; }
+.invest-card p { color:#58708d; font-size:.91rem; line-height:1.66; }
+.invest-link { color:var(--ink); font-size:.85rem; }
+.invest-link:hover { color:var(--gold); }
+.publicaciones-grid { gap:18px; }
+.publicacion { padding:31px; border:1px solid var(--rule); border-radius:0; }
+.publicacion:hover { transform:translateY(-5px); box-shadow:0 16px 28px rgba(9,29,54,.09); }
+.publicacion h3 { font-size:1.18rem; }
+.publicacion p { color:#58708d; font-size:.92rem; }
+.publicacion a { color:var(--ink); font-size:.88rem; }
+.publicaciones-cta { margin-top:34px; text-align:center; }
+.publicaciones-cta a { display:inline-flex; align-items:center; gap:9px; padding:13px 20px; border:1px solid var(--ink); color:var(--ink); font-size:.84rem; font-weight:700; text-decoration:none; }
+.publicaciones-cta a:hover { background:var(--ink); color:#fff; }
+footer { padding:38px 0; background:var(--ink); }
+footer p { font-size:.78rem; letter-spacing:.04em; }
+@media (max-width:980px) { .hero { grid-template-columns:1fr; max-width:760px; padding:56px 42px; text-align:left; } .hero-foto { justify-content:flex-start; max-width:430px; } .hero-foto img { height:auto; } .datos { max-width:650px; } .investigacion-grid { grid-template-columns:repeat(2,1fr); } }
+@media (max-width:768px) { header,header .container { height:72px; } body { padding-top:72px; } .menu-toggle { font-size:26px; } nav a { padding:0; font-size:1.05rem; } nav a::after { bottom:-9px; } .hero { width:100%; padding:42px 7%; } .hero-info h1 { font-size:clamp(2.8rem,12vw,4rem); } .hero-info p { font-size:1rem; } .datos { grid-template-columns:1fr; gap:0; } .dato { min-height:auto; padding:11px 0; } .sobre,.investigacion,.publicaciones { padding-block:70px; } .titulo-seccion { margin-bottom:34px; } .investigacion-grid { grid-template-columns:1fr; } .invest-card { min-height:245px; } }

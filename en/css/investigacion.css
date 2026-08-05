@@ -1,0 +1,940 @@
+/*==================================================
+RESET
+==================================================*/
+
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    font-family:'Inter',sans-serif;
+    background:#ffffff;
+    color:#334155;
+    overflow-x:hidden;
+
+}
+
+
+/*==================================================
+VARIABLES
+==================================================*/
+
+:root{
+
+    --blue:#08203A;
+    --gold:#C9A227;
+    --light:#F7F9FC;
+    --text:#5B6676;
+    --white:#ffffff;
+
+    --shadow:0 25px 60px rgba(0,0,0,.08);
+
+}
+
+
+/*==================================================
+UTILIDADES
+==================================================*/
+
+.container{
+
+    width:min(92%,1320px);
+    margin:auto;
+
+}
+
+section{
+
+    padding:150px 0;
+
+}
+
+img{
+
+    display:block;
+    max-width:100%;
+
+}
+
+h1,h2,h3{
+
+    font-family:'Playfair Display',serif;
+
+}
+
+h2{
+
+    font-size:clamp(2.8rem,4vw,4.3rem);
+    color:var(--blue);
+    line-height:1.15;
+
+}
+
+p{
+
+    color:var(--text);
+    line-height:2;
+
+}
+
+.section-header{
+
+    max-width:900px;
+    margin:auto;
+    text-align:center;
+    margin-bottom:80px;
+
+}
+
+.section-tag{
+
+    display:inline-block;
+
+    color:var(--gold);
+
+    font-size:.82rem;
+
+    font-weight:700;
+
+    letter-spacing:3px;
+
+    margin-bottom:22px;
+
+}
+
+.gold-line{
+
+    width:110px;
+    height:4px;
+
+    background:var(--gold);
+
+    border-radius:30px;
+
+    margin:28px auto;
+
+}
+
+
+/*==================================================
+HEADER
+==================================================*/
+
+header{
+
+    position:absolute;
+    width:100%;
+    top:0;
+    left:0;
+    z-index:100;
+
+}
+
+.nav{
+
+    height:95px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+}
+
+.logo{
+
+    display:flex;
+    align-items:center;
+    gap:18px;
+
+    text-decoration:none;
+
+}
+
+.logo-dg{
+
+    color:var(--gold);
+
+    font-size:3rem;
+
+    font-weight:700;
+
+}
+
+.logo h3{
+
+    color:white;
+
+}
+
+.logo p{
+
+    color:rgba(255,255,255,.75);
+
+}
+
+nav{
+
+    display:flex;
+
+    gap:36px;
+
+}
+
+nav a{
+
+    color:white;
+
+    text-decoration:none;
+
+    font-weight:500;
+
+    transition:.3s;
+
+}
+
+nav a:hover,
+nav a.active{
+
+    color:var(--gold);
+
+}
+
+
+/*==================================================
+HERO
+==================================================*/
+
+.hero{
+
+    position:relative;
+
+    min-height:100vh;
+
+    display:flex;
+
+    align-items:center;
+
+    overflow:hidden;
+
+}
+
+.hero img{
+
+    position:absolute;
+
+    inset:0;
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+}
+
+.overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+    linear-gradient(
+
+    90deg,
+
+    rgba(8,32,58,.72),
+
+    rgba(8,32,58,.32),
+
+    rgba(8,32,58,.08),
+
+    transparent
+
+    );
+
+}
+
+.hero-content{
+
+    position:relative;
+
+    z-index:5;
+
+    max-width:760px;
+
+    margin-left:8%;
+
+}
+
+.hero-tag{
+
+    display:inline-block;
+
+    background:rgba(255,255,255,.12);
+
+    color:white;
+
+    padding:12px 20px;
+
+    border-radius:50px;
+
+    backdrop-filter:blur(12px);
+
+    letter-spacing:2px;
+
+    font-size:.8rem;
+
+    margin-bottom:28px;
+
+}
+
+.hero h1{
+
+    color:white;
+
+    font-size:clamp(4rem,6vw,6.3rem);
+
+    line-height:1.02;
+
+}
+
+.hero .gold-line{
+
+    margin:35px 0;
+
+}
+
+.hero-text{
+
+    color:white;
+
+    font-size:1.15rem;
+
+    max-width:620px;
+
+}
+
+.hero-btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    margin-top:45px;
+
+    padding:18px 38px;
+
+    border-radius:60px;
+
+    background:var(--gold);
+
+    color:var(--blue);
+
+    text-decoration:none;
+
+    font-weight:700;
+
+    transition:.35s;
+
+}
+
+.hero-btn:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 18px 40px rgba(0,0,0,.25);
+
+}
+/*==================================================
+INTRODUCCIÓN
+==================================================*/
+
+.intro{
+
+    background:#ffffff;
+
+}
+
+.intro-grid{
+
+    display:grid;
+
+    grid-template-columns:1.25fr .75fr;
+
+    gap:90px;
+
+    align-items:center;
+
+}
+
+.intro h2{
+
+    margin:18px 0 30px;
+
+}
+
+.intro p{
+
+    margin-bottom:28px;
+
+    font-size:1.08rem;
+
+}
+
+.intro-side{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:28px;
+
+}
+
+.feature{
+
+    background:white;
+
+    padding:34px;
+
+    border-radius:22px;
+
+    box-shadow:var(--shadow);
+
+    transition:.35s;
+
+}
+
+.feature:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.feature svg{
+
+    width:42px;
+
+    height:42px;
+
+    color:var(--gold);
+
+    margin-bottom:18px;
+
+}
+
+.feature h3{
+
+    color:var(--blue);
+
+    margin-bottom:12px;
+
+    font-size:1.55rem;
+
+}
+
+.feature p{
+
+    margin:0;
+
+    line-height:1.8;
+
+}
+
+
+
+/*==================================================
+PIPELINE
+==================================================*/
+
+.pipeline{
+
+    background:var(--light);
+
+}
+
+.pipeline-image{
+
+    margin-top:70px;
+
+}
+
+.pipeline-image img{
+
+    width:100%;
+
+    border-radius:26px;
+
+    box-shadow:var(--shadow);
+
+}
+
+
+
+/*==================================================
+ECOSISTEMA
+==================================================*/
+
+.ecosistema{
+
+    background:white;
+
+}
+
+.ecosistema-image{
+
+    margin-top:70px;
+
+}
+
+.ecosistema-image img{
+
+    width:100%;
+
+    border-radius:26px;
+
+    box-shadow:var(--shadow);
+
+}
+
+
+
+/*==================================================
+FRASE
+==================================================*/
+
+.frase{
+
+    background:linear-gradient(135deg,#08203A,#10365E);
+
+    padding:120px 0;
+
+}
+
+.frase blockquote{
+
+    max-width:980px;
+
+    margin:auto;
+
+    text-align:center;
+
+    color:white;
+
+    font-family:'Playfair Display',serif;
+
+    font-size:clamp(2rem,3vw,3rem);
+
+    line-height:1.5;
+
+    font-style:italic;
+
+}
+/*==================================================
+IMPACTO
+==================================================*/
+
+.impacto{
+
+    background:#ffffff;
+
+}
+
+.impacto-grid{
+
+    display:grid;
+
+    grid-template-columns:42% 58%;
+
+    gap:60px;
+
+    align-items:center;
+
+}
+
+.impacto-image{
+
+    display:flex;
+    align-items:center;
+
+}
+
+.impacto-image img{
+
+    width:100%;
+
+    max-height:540px;
+
+    object-fit:cover;
+
+    object-position:center 65%;
+
+    border-radius:26px;
+
+}
+
+.impacto-content{
+
+    max-width:620px;
+
+}
+
+.impacto-content .gold-line{
+
+    margin:28px 0;
+
+}
+
+.impacto-content h2{
+
+    margin-top:18px;
+
+}
+
+.impacto-content p{
+
+    margin-bottom:24px;
+
+    font-size:1.05rem;
+
+}
+
+.impacto-list{
+
+    list-style:none;
+
+    margin-top:35px;
+
+}
+
+.impacto-list li{
+
+    position:relative;
+
+    padding-left:34px;
+
+    margin-bottom:18px;
+
+    font-weight:500;
+
+    color:var(--blue);
+
+}
+
+.impacto-list li::before{
+
+    content:"✓";
+
+    position:absolute;
+
+    left:0;
+
+    color:var(--gold);
+
+    font-size:1.1rem;
+
+    font-weight:700;
+
+}
+/*==================================================
+TIMELINE
+==================================================*/
+
+.timeline{
+
+    background:var(--light);
+
+}
+
+.timeline-image{
+
+    margin-top:70px;
+
+}
+
+.timeline-image img{
+
+    width:100%;
+
+    border-radius:26px;
+
+    box-shadow:var(--shadow);
+
+}
+
+
+
+/*==================================================
+VOLVER
+==================================================*/
+
+.volver{
+
+    padding:90px 0;
+    text-align:center;
+
+}
+
+.btn-volver{
+
+    display:inline-flex;
+    align-items:center;
+    gap:12px;
+
+    padding:18px 38px;
+
+    border:2px solid var(--gold);
+
+    border-radius:60px;
+
+    color:var(--blue);
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.btn-volver:hover{
+
+    background:var(--gold);
+
+    color:white;
+
+    transform:translateY(-4px);
+
+}
+
+
+
+/*==================================================
+FOOTER
+==================================================*/
+
+footer{
+
+    background:var(--blue);
+
+    padding:70px 0;
+
+}
+
+.footer-grid{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:40px;
+
+    flex-wrap:wrap;
+
+}
+
+.footer-logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:20px;
+
+}
+
+.footer-logo h3{
+
+    color:white;
+
+}
+
+.footer-logo p{
+
+    color:rgba(255,255,255,.7);
+
+}
+
+.footer-social{
+
+    display:flex;
+
+    gap:18px;
+
+}
+
+.footer-social a{
+
+    width:48px;
+    height:48px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.08);
+
+    color:white;
+
+    transition:.3s;
+
+}
+
+.footer-social a:hover{
+
+    background:var(--gold);
+
+    color:var(--blue);
+
+}
+
+
+
+/*==================================================
+ANIMACIONES
+==================================================*/
+
+.pipeline-image img,
+.ecosistema-image img,
+.impacto-image img,
+.timeline-image img{
+
+    transition:transform .45s ease,
+               box-shadow .45s ease;
+
+}
+
+.pipeline-image img:hover,
+.ecosistema-image img:hover,
+.impacto-image img:hover,
+.timeline-image img:hover{
+
+    transform:translateY(-8px) scale(1.01);
+
+    box-shadow:0 35px 70px rgba(0,0,0,.12);
+
+}
+
+
+
+/*==================================================
+RESPONSIVE
+==================================================*/
+
+@media (max-width:992px){
+
+    section{
+
+        padding:110px 0;
+
+    }
+
+    .intro-grid{
+
+        grid-template-columns:1fr;
+
+        gap:60px;
+
+    }
+
+    .hero-content{
+
+        margin-left:0;
+
+        text-align:center;
+
+        padding:0 20px;
+
+    }
+
+    .hero .gold-line{
+
+        margin:30px auto;
+
+    }
+
+    .hero-text{
+
+        margin:auto;
+
+    }
+
+    nav{
+
+        display:none;
+
+    }
+
+}
+
+@media (max-width:768px){
+
+    h2{
+
+        font-size:2.4rem;
+
+    }
+
+    .hero h1{
+
+        font-size:3.3rem;
+
+    }
+
+    .hero{
+
+        min-height:85vh;
+
+    }
+
+    .feature{
+
+        padding:28px;
+
+    }
+
+    .frase{
+
+        padding:90px 0;
+
+    }
+
+    .frase blockquote{
+
+        font-size:1.7rem;
+
+    }
+
+    .footer-grid{
+
+        flex-direction:column;
+
+        text-align:center;
+
+    }
+
+    .footer-logo{
+
+        flex-direction:column;
+
+    }
+
+}

@@ -1,0 +1,65 @@
+/* Ajustes de lectura y jerarquía para la portada en móviles */
+@media (max-width: 768px) {
+    .sobre {
+        width: 100%;
+        padding: 68px 7%;
+    }
+
+    .sobre .titulo-seccion {
+        text-align: left;
+        margin-bottom: 30px;
+    }
+
+    .sobre .linea-seccion {
+        margin-left: 0;
+    }
+
+    .sobre-contenedor {
+        display: block;
+    }
+
+    .sobre-texto {
+        padding-right: 0;
+    }
+
+    .sobre-texto p {
+        font-size: 1rem;
+        line-height: 1.78;
+    }
+
+    .sobre-texto .btn.btn-primary {
+        width: 100%;
+        margin: 8px 0 42px;
+        padding: 15px 18px;
+        text-align: center;
+    }
+
+    .sobre-info {
+        display: grid;
+        gap: 0;
+        padding: 28px 0 0;
+        border-top: 1px solid var(--gold);
+        border-left: 0;
+    }
+
+    .info-item {
+        gap: 14px;
+        margin: 0;
+        padding: 18px 0;
+        border-bottom: 1px solid var(--rule);
+    }
+
+    .info-item .icono {
+        flex: 0 0 28px;
+        padding-top: 2px;
+    }
+
+    .info-item h3 {
+        font-size: .98rem;
+    }
+
+    .info-item p {
+        font-size: .87rem;
+        line-height: 1.55;
+    }
+}

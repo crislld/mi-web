@@ -1,0 +1,1137 @@
+/*======================================================
+CV.CSS
+David Gómez Candón
+======================================================*/
+
+
+/*======================================================
+HERO
+======================================================*/
+
+.cv-hero{
+
+    position:relative;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:center;
+
+    min-height:78vh;
+
+    padding:140px 20px 120px;
+
+    color:#fff;
+
+    overflow:hidden;
+
+    background:
+        linear-gradient(rgba(8,26,49,.78),
+        rgba(8,26,49,.78)),
+        url("../img/contacto/hero.jpg")
+        center center/cover no-repeat;
+
+}
+
+.cv-overlay{
+
+    position:relative;
+
+    z-index:2;
+
+    width:100%;
+
+    max-width:980px;
+
+    margin:auto;
+
+}
+
+.hero-tag{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:10px 22px;
+
+    border:1px solid rgba(255,255,255,.28);
+
+    border-radius:40px;
+
+    letter-spacing:2px;
+
+    font-size:.82rem;
+
+    font-weight:600;
+
+    text-transform:uppercase;
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(10px);
+
+}
+
+.cv-hero h1{
+
+    margin:32px 0 22px;
+
+    font-family:"Playfair Display",serif;
+
+    font-size:clamp(3rem,6vw,5rem);
+
+    line-height:1.05;
+
+    color:#fff;
+
+}
+
+.hero-line{
+
+    width:90px;
+
+    height:4px;
+
+    margin:0 auto 35px;
+
+    border-radius:50px;
+
+    background:#c8a15a;
+
+}
+
+.cv-hero p{
+
+    max-width:760px;
+
+    margin:0 auto;
+
+    font-size:1.15rem;
+
+    line-height:1.9;
+
+    color:rgba(255,255,255,.92);
+
+}
+
+.cv-hero .btn{
+
+    margin-top:45px;
+
+    padding:15px 34px;
+
+}
+/*======================================================
+PERFIL
+======================================================*/
+
+.cv-profile{
+
+    padding:120px 0;
+
+    background:#ffffff;
+
+}
+
+.cv-profile .container{
+
+    width:min(1280px,92%);
+
+    margin:0 auto;
+
+}
+
+.profile-grid{
+
+    display:grid;
+
+    grid-template-columns:380px 1fr;
+
+    gap:90px;
+
+    align-items:center;
+
+}
+
+.profile-image{
+
+    position:relative;
+
+    display:flex;
+
+    justify-content:center;
+
+}
+
+.profile-image img{
+
+    width:100%;
+
+    max-width:360px;
+
+    display:block;
+
+    border-radius:28px;
+
+    box-shadow:
+        0 25px 60px rgba(0,0,0,.18);
+
+}
+
+.profile-content{
+
+    max-width:760px;
+
+}
+
+.profile-content h2{
+
+    font-family:"Playfair Display",serif;
+
+    font-size:3.3rem;
+
+    color:#0b2242;
+
+    margin:20px 0 12px;
+
+    line-height:1.1;
+
+}
+
+.profile-content h3{
+
+    font-size:1.15rem;
+
+    font-weight:500;
+
+    color:#6b7280;
+
+    line-height:1.8;
+
+    margin-bottom:32px;
+
+}
+
+.profile-content p{
+
+    color:#596273;
+
+    font-size:1.05rem;
+
+    line-height:1.95;
+
+    margin-bottom:22px;
+
+}
+
+.profile-buttons{
+
+    display:flex;
+
+    gap:18px;
+
+    margin-top:38px;
+
+    flex-wrap:wrap;
+
+}
+
+.profile-buttons .btn{
+
+    padding:14px 30px;
+
+}
+/*======================================================
+INTRODUCCIÓN
+======================================================*/
+
+.career-intro{
+
+    padding:120px 0;
+
+    background:#f8fafc;
+
+}
+
+.career-intro .container{
+
+    width:min(1280px,92%);
+
+    margin:auto;
+
+}
+
+.career-grid{
+
+    display:grid;
+
+    grid-template-columns:1.1fr .9fr;
+
+    gap:80px;
+
+    align-items:center;
+
+}
+
+.career-text{
+
+    max-width:700px;
+
+}
+
+.career-text p{
+
+    color:#5b6472;
+
+    font-size:1.05rem;
+
+    line-height:2;
+
+    margin-bottom:24px;
+
+}
+
+.career-image{
+
+    display:flex;
+
+    justify-content:center;
+
+}
+
+.career-image img{
+
+    width:100%;
+
+    max-width:560px;
+
+    border-radius:24px;
+
+    object-fit:cover;
+
+    box-shadow:
+        0 25px 60px rgba(0,0,0,.15);
+
+}
+/*======================================================
+CENTROS DE INVESTIGACIÓN
+======================================================*/
+
+.research-centers{
+
+    padding:120px 0;
+
+    background:#ffffff;
+
+}
+
+.research-centers .container{
+
+    width:min(1280px,92%);
+
+    margin:auto;
+
+}
+
+.centers-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:30px;
+
+    margin-top:70px;
+
+}
+
+.center-card{
+
+    background:#fff;
+
+    border-radius:22px;
+
+    padding:35px 28px;
+
+    text-align:center;
+
+    border:1px solid #edf0f4;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.07);
+
+    transition:.35s;
+
+}
+
+.center-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 25px 60px rgba(0,0,0,.12);
+
+}
+
+.center-card img{
+
+    width:90px;
+
+    height:90px;
+
+    object-fit:contain;
+
+    margin:0 auto 22px;
+
+    display:block;
+
+}
+
+.center-card h3{
+
+    font-family:"Playfair Display",serif;
+
+    font-size:1.35rem;
+
+    color:#0b2242;
+
+    margin-bottom:10px;
+
+    line-height:1.3;
+
+}
+
+.center-card span{
+
+    display:block;
+
+    color:#c8a15a;
+
+    font-weight:700;
+
+    font-size:.95rem;
+
+    margin-bottom:18px;
+
+}
+
+.center-card p{
+
+    color:#5b6472;
+
+    font-size:.98rem;
+
+    line-height:1.8;
+
+}
+/*======================================================
+TRAYECTORIA CIENTÍFICA
+======================================================*/
+
+.career{
+
+    padding:130px 0;
+
+    background:#f8fafc;
+
+}
+
+.career .container{
+
+    width:min(1320px,92%);
+
+    margin:auto;
+
+}
+
+.career .section-header{
+
+    max-width:850px;
+
+    margin:0 auto 90px;
+
+    text-align:center;
+
+}
+
+.career-timeline{
+
+    position:relative;
+
+    display:grid;
+
+    grid-template-columns:repeat(6,1fr);
+
+    gap:30px;
+
+    align-items:start;
+
+    margin-top:90px;
+
+}
+
+.career-line{
+
+    position:absolute;
+
+    top:38px;
+
+    left:8%;
+
+    right:8%;
+
+    height:4px;
+
+    background:#c8a15a;
+
+    border-radius:10px;
+
+    z-index:1;
+
+}
+
+.career-step{
+
+    position:relative;
+
+    z-index:2;
+
+    text-align:center;
+
+}
+
+.career-icon{
+
+    width:76px;
+
+    height:76px;
+
+    margin:0 auto 22px;
+
+    border-radius:50%;
+
+    background:#ffffff;
+
+    border:4px solid #c8a15a;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:30px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+}
+
+.career-year{
+
+    font-size:1rem;
+
+    font-weight:700;
+
+    color:#c8a15a;
+
+    margin-bottom:10px;
+
+    letter-spacing:1px;
+
+}
+
+.career-step h3{
+
+    font-family:"Playfair Display",serif;
+
+    font-size:1.2rem;
+
+    color:#0b2242;
+
+    margin-bottom:10px;
+
+    line-height:1.3;
+
+}
+
+.career-step p{
+
+    color:#5b6472;
+
+    font-size:.95rem;
+
+    line-height:1.7;
+
+    max-width:180px;
+
+    margin:0 auto;
+
+}
+/*======================================================
+FORMACIÓN · INVESTIGACIÓN
+======================================================*/
+
+.cv-highlights{
+
+    padding:120px 0;
+
+    background:#ffffff;
+
+}
+
+.cv-highlights .container{
+
+    width:min(1280px,92%);
+
+    margin:auto;
+
+}
+
+.highlights-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:30px;
+
+    margin-top:70px;
+
+}
+
+.highlight-card{
+
+    background:#fff;
+
+    padding:40px 35px;
+
+    border-radius:22px;
+
+    text-align:center;
+
+    box-shadow:0 15px 45px rgba(0,0,0,.08);
+
+    transition:.35s;
+
+}
+
+.highlight-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 25px 60px rgba(0,0,0,.12);
+
+}
+
+.highlight-icon{
+
+    width:78px;
+
+    height:78px;
+
+    margin:0 auto 25px;
+
+    border-radius:50%;
+
+    background:#c8a15a;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+}
+
+.highlight-icon svg{
+
+    width:34px;
+
+    height:34px;
+
+    stroke:#fff;
+
+}
+
+.highlight-card h3{
+
+    font-family:"Playfair Display",serif;
+
+    font-size:1.35rem;
+
+    color:#0b2242;
+
+    margin-bottom:18px;
+
+}
+
+.highlight-card p{
+
+    color:#5b6472;
+
+    line-height:1.8;
+
+}
+
+
+/*======================================================
+IMPACTO CIENTÍFICO
+======================================================*/
+
+.cv-achievements{
+
+    padding:120px 0;
+
+    background:#f7f8fa;
+
+}
+
+.cv-achievements .container{
+
+    width:min(1280px,92%);
+
+    margin:auto;
+
+}
+
+.achievement-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:30px;
+
+    margin-top:70px;
+
+}
+
+.achievement-card{
+
+    background:#fff;
+
+    border-radius:22px;
+
+    padding:40px 35px;
+
+    text-align:center;
+
+    box-shadow:0 15px 45px rgba(0,0,0,.08);
+
+    transition:.35s;
+
+}
+
+.achievement-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.achievement-card svg{
+
+    width:42px;
+
+    height:42px;
+
+    color:#c8a15a;
+
+    margin-bottom:22px;
+
+}
+
+.achievement-card h3{
+
+    font-family:"Playfair Display",serif;
+
+    color:#0b2242;
+
+    margin-bottom:18px;
+
+}
+
+.achievement-card p{
+
+    color:#5b6472;
+
+    line-height:1.8;
+
+}
+/*======================================================
+PROYECTOS
+======================================================*/
+
+.cv-projects{
+
+    padding:120px 0;
+
+    background:#ffffff;
+
+}
+
+.cv-projects .container{
+
+    width:min(1280px,92%);
+
+    margin:auto;
+
+}
+
+.projects-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:35px;
+
+    margin-top:70px;
+
+}
+
+.project-card{
+
+    background:#fff;
+
+    border-top:5px solid #c8a15a;
+
+    border-radius:22px;
+
+    padding:40px 35px;
+
+    box-shadow:0 15px 45px rgba(0,0,0,.08);
+
+    transition:.35s;
+
+}
+
+.project-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 25px 60px rgba(0,0,0,.12);
+
+}
+
+.project-type{
+
+    display:inline-block;
+
+    color:#c8a15a;
+
+    font-size:.82rem;
+
+    font-weight:700;
+
+    letter-spacing:2px;
+
+    margin-bottom:18px;
+
+}
+
+.project-card h3{
+
+    font-family:"Playfair Display",serif;
+
+    color:#0b2242;
+
+    font-size:1.5rem;
+
+    margin-bottom:18px;
+
+}
+
+.project-card p{
+
+    color:#5b6472;
+
+    line-height:1.9;
+
+}
+
+
+/*======================================================
+CITA FINAL
+======================================================*/
+
+.cv-quote{
+
+    padding:120px 0;
+
+    background:#0b2242;
+
+    text-align:center;
+
+}
+
+.cv-quote .container{
+
+    width:min(900px,90%);
+
+    margin:auto;
+
+}
+
+.cv-quote blockquote{
+
+    font-family:"Playfair Display",serif;
+
+    font-size:2.1rem;
+
+    line-height:1.7;
+
+    color:#ffffff;
+
+    font-style:italic;
+
+}
+
+.cv-quote blockquote::before{
+
+    content:"“";
+
+    color:#c8a15a;
+
+}
+
+.cv-quote blockquote::after{
+
+    content:"”";
+
+    color:#c8a15a;
+
+}
+
+
+/*======================================================
+FOOTER
+======================================================*/
+
+footer{
+
+    background:#071d3a;
+
+    color:#ffffff;
+
+    padding:35px 0;
+
+}
+
+footer .container{
+
+    width:min(1280px,92%);
+
+    margin:auto;
+
+    text-align:center;
+
+}
+
+footer p{
+
+    color:rgba(255,255,255,.85);
+
+    font-size:.95rem;
+
+    letter-spacing:.4px;
+
+}
+
+/*======================================================
+RESPONSIVE
+======================================================*/
+
+@media (max-width:1200px){
+
+    .profile-grid,
+    .career-grid{
+
+        grid-template-columns:1fr;
+        gap:60px;
+        text-align:center;
+
+    }
+
+    .career-text{
+
+        margin:auto;
+
+    }
+
+    .career-image{
+
+        order:-1;
+
+    }
+
+    .centers-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+    .highlights-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+    .projects-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .achievement-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+
+@media (max-width:992px){
+
+    .career-timeline{
+
+        grid-template-columns:repeat(2,1fr);
+        row-gap:60px;
+
+    }
+
+    .career-line{
+
+        display:none;
+
+    }
+
+    .career-step{
+
+        width:100%;
+        max-width:280px;
+        margin:auto;
+
+    }
+
+}
+
+
+@media (max-width:768px){
+
+    .cv-hero{
+
+        min-height:600px;
+        padding:120px 20px 80px;
+
+    }
+
+    .cv-hero h1{
+
+        font-size:2.7rem;
+
+    }
+
+    .section-header h2{
+
+        font-size:2.3rem;
+
+    }
+
+    .profile-content h2{
+
+        font-size:2.4rem;
+
+    }
+
+    .profile-content h3{
+
+        font-size:1rem;
+
+    }
+
+    .profile-buttons{
+
+        justify-content:center;
+
+    }
+
+    .centers-grid,
+    .highlights-grid,
+    .achievement-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .career-timeline{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .career-step{
+
+        max-width:340px;
+
+    }
+
+    .cv-quote blockquote{
+
+        font-size:1.6rem;
+
+    }
+
+}
+
+
+@media (max-width:480px){
+
+    .hero-tag{
+
+        font-size:.72rem;
+        letter-spacing:1px;
+        padding:8px 16px;
+
+    }
+
+    .cv-hero h1{
+
+        font-size:2.2rem;
+
+    }
+
+    .profile-content h2{
+
+        font-size:2rem;
+
+    }
+
+    .section-header h2{
+
+        font-size:2rem;
+
+    }
+
+    .career-icon{
+
+        width:64px;
+        height:64px;
+        font-size:24px;
+
+    }
+
+    .project-card,
+    .highlight-card,
+    .achievement-card,
+    .center-card{
+
+        padding:30px 24px;
+
+    }
+
+}
