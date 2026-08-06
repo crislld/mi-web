@@ -103,8 +103,13 @@
 
     .language-switch {
         position: fixed !important;
-        top: 20px !important;
-        right: 92px !important;
+        inset: 20px 92px auto auto !important;
+        width: auto !important;
+        height: auto !important;
+        min-height: 0 !important;
+        padding: 0 !important;
+        background: transparent !important;
+        transform: none !important;
         z-index: 3200 !important;
         display: flex !important;
         flex-direction: row !important;
