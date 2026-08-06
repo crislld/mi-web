@@ -63,3 +63,50 @@
         line-height: 1.55;
     }
 }
+
+/* Prevent the off-canvas navigation from creating a horizontal page width. */
+@media (max-width: 900px) {
+    html, body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    header .container {
+        width: 100%;
+        max-width: none;
+        padding-inline: 20px;
+    }
+
+    #menu {
+        position: fixed !important;
+        inset: 0 !important;
+        width: 100vw !important;
+        height: 100dvh !important;
+        margin: 0 !important;
+        padding: 92px 24px 36px !important;
+        transform: translate3d(100vw, 0, 0) !important;
+        overflow-y: auto;
+        overscroll-behavior: contain;
+    }
+
+    #menu.open {
+        transform: translate3d(0, 0, 0) !important;
+    }
+
+    #menu a {
+        width: 100%;
+        max-width: 330px;
+        text-align: center;
+        font-size: clamp(1.2rem, 6vw, 1.55rem) !important;
+    }
+
+    .language-switch {
+        position: fixed !important;
+        top: 22px !important;
+        right: 78px !important;
+        z-index: 2100 !important;
+        flex-direction: row !important;
+        gap: 6px !important;
+    }
+}
