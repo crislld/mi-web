@@ -19,6 +19,7 @@
   const clean = s => s.replace(/\s+/g, ' ').trim();
   const fixedHeadings = [
     ['resumen', '', 'Overview'],
+    ['teledetección', '', 'Remote Sensing'],
     ['perfil', 'profesional', 'Professional Profile'],
     ['trayectoria', 'científica', 'Scientific Career'],
     ['centros', 'investigación', 'Research Institutions'],
@@ -74,7 +75,6 @@
     ['fenotipado', 'vegetal', 'Plant Phenotyping'],
     ['inteligencia', 'artificial', 'Artificial Intelligence'],
     ['plataformas', 'uav', 'UAV Platforms'],
-    ['teledetección', '', 'Remote Sensing'],
     ['investigación', '', 'Research'],
     ['laboratorio', 'virtual', 'Virtual Laboratory'],
     ['divulgación', '', 'Science Outreach'],

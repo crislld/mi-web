@@ -987,3 +987,28 @@ svg.lucide{
     line-height:1.9;
 
 }
+
+/* Mobile layout */
+@media(max-width:640px){
+    body{padding-top:64px;overflow-x:hidden;}
+    header,header .container{height:64px;}
+    header .container{width:94%;gap:10px;}
+    .logo-dg{font-size:27px;margin-right:8px;}
+    .logo-texto{font-size:10px;letter-spacing:1.1px;white-space:nowrap;}
+    .titulo-linea-menu{font-size:.72rem;letter-spacing:.8px;text-align:right;}
+    .hero-linea{height:270px;}
+    .hero-overlay{padding:0 1rem;}
+    .hero-overlay h1{font-size:2.15rem;letter-spacing:1.5px;line-height:1.05;}
+    .hero-overlay p{font-size:.93rem;}
+    section,.objetivo-cientifico,.retos-linea{padding:55px 0;}
+    .titulo-seccion{margin-bottom:32px;}
+    .titulo-seccion h2,.objetivo-box h2{font-size:1.8rem;line-height:1.2;}
+    .resumen-contenido p,.impacto-intro p,.objetivo-box p{font-size:1rem;line-height:1.75;text-align:left;}
+    .tecnologias-grid,.impacto-grid,.casos-grid,.aplicaciones-grid,.retos-grid{grid-template-columns:1fr;gap:18px;}
+    .tecnologia-card,.impacto-card,.aplicacion-card,.reto-card{padding:24px 20px;min-height:0;}
+    .caso-info{padding:24px 20px;}
+    .objetivo-box{padding:32px 22px;border-left-width:4px;}
+    .proceso-linea{grid-template-columns:1fr;gap:34px;margin-top:30px;}
+    .proceso-item p{max-width:100%;}
+    .volver-home{padding:50px 0 70px;}
+}
