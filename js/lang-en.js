@@ -3,7 +3,7 @@
   // Translate the complete visible copy of the English edition. Academic paper
   // titles already written in English are left untouched by the service.
   const translate = async text => {
-    const response = await fetch(`https://translate.googleapis.com/translate_a/single?client=gtx&sl=es&tl=en&dt=t&q=${encodeURIComponent(text)}`);
+    const response = await fetch(`https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=en&dt=t&q=${encodeURIComponent(text)}`);
     const data = await response.json();
     return data[0].map(part => part[0]).join('');
   };
@@ -117,7 +117,10 @@
   while (all.nextNode()) {
     const node = all.currentNode;
     const value = clean(node.nodeValue);
-    if (value.length > 2 && /[áéíóúñ¿¡]|\b(el|la|los|las|de|para|con|una|del)\b/i.test(value) && !translations.has(value) && !long.has(value)) remaining.push([node, value]);
+    const parent = node.parentElement;
+    // Translate every visible text node. This covers headings without accents
+    // (for example, “Trigo”) as well as paragraphs and labels.
+    if (value.length > 1 && parent && !['SCRIPT', 'STYLE', 'NOSCRIPT'].includes(parent.tagName) && !translations.has(value) && !long.has(value)) remaining.push([node, value]);
   }
   Promise.all(remaining.map(async ([node, value]) => {
     try { node.nodeValue = await translate(value); } catch (_) { /* keeps original copy if offline */ }
