@@ -103,9 +103,10 @@
 
     .language-switch {
         position: fixed !important;
-        top: 22px !important;
-        right: 78px !important;
-        z-index: 2100 !important;
+        top: 20px !important;
+        right: 92px !important;
+        z-index: 3200 !important;
+        display: flex !important;
         flex-direction: row !important;
         gap: 6px !important;
     }
