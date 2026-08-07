@@ -7,20 +7,21 @@
 
   if (!document.body || document.querySelector('.language-switch')) return;
 
-  // A div is deliberately used instead of nav: every page has different nav styles.
-  const switcher = document.createElement('div');
+  const switcher = document.createElement('nav');
   switcher.className = 'language-switch';
   switcher.setAttribute('aria-label', isEnglish ? 'Language selector' : 'Selector de idioma');
   switcher.innerHTML = `
-    <a href="${spanishHref}" class="${isEnglish ? '' : 'active'}" lang="es" aria-label="Español" title="Español">
-      <svg viewBox="0 0 30 20" role="img" aria-label="Bandera de España"><rect width="30" height="20" fill="#aa151b"/><rect y="5" width="30" height="10" fill="#f1bf00"/></svg>
+    <a href="${spanishHref}" class="${isEnglish ? '' : 'active'}" lang="es" aria-label="Spanish" title="Español">
+      <svg viewBox="0 0 30 20" aria-hidden="true"><rect width="30" height="20" fill="#aa151b"/><rect y="5" width="30" height="10" fill="#f1bf00"/></svg>
     </a>
     <a href="${englishHref}" class="${isEnglish ? 'active' : ''}" lang="en" aria-label="English" title="English">
-      <svg viewBox="0 0 30 20" role="img" aria-label="United Kingdom flag"><rect width="30" height="20" fill="#012169"/><path d="M0 0 30 20M30 0 0 20" stroke="#fff" stroke-width="4"/><path d="M0 0 30 20M30 0 0 20" stroke="#c8102e" stroke-width="2"/><path d="M15 0v20M0 10h30" stroke="#fff" stroke-width="6"/><path d="M15 0v20M0 10h30" stroke="#c8102e" stroke-width="3"/></svg>
+      <svg viewBox="0 0 30 20" aria-hidden="true"><rect width="30" height="20" fill="#012169"/><path d="M0 0 30 20M30 0 0 20" stroke="#fff" stroke-width="4"/><path d="M0 0 30 20M30 0 0 20" stroke="#c8102e" stroke-width="2"/><path d="M15 0v20M0 10h30" stroke="#fff" stroke-width="6"/><path d="M15 0v20M0 10h30" stroke="#c8102e" stroke-width="3"/></svg>
     </a>`;
-
-  // Append to body so no header-specific CSS can hide or move the flags.
   document.body.append(switcher);
+
+  // A page with the hamburger keeps the selector beside it. The remaining
+  // headers use the far-right corner, with only the DG monogram on mobile.
+  if (document.querySelector('.menu-toggle')) document.body.classList.add('has-menu-toggle');
 
   const style = document.createElement('style');
   style.textContent = `
@@ -32,15 +33,11 @@
       display: flex !important;
       align-items: center !important;
       gap: 8px !important;
-      width: auto !important;
-      height: auto !important;
-      min-height: 0 !important;
       margin: 0 !important;
       padding: 0 !important;
       background: transparent !important;
       border: 0 !important;
       transform: none !important;
-      transition: none !important;
       white-space: nowrap !important;
     }
     .language-switch a {
@@ -58,19 +55,18 @@
     .language-switch a:hover { opacity: 1; transform: translateY(-1px); }
     .language-switch a.active { opacity: 1; box-shadow: 0 0 0 2px #d4a72c; }
     @media (min-width: 901px) {
-      /* Reserve a fixed, clear area for flags on every desktop header. */
       header .container > nav:not(.language-switch) {
         margin-right: clamp(92px, 8vw, 150px) !important;
         max-width: calc(100% - clamp(92px, 8vw, 150px)) !important;
       }
     }
     @media (max-width: 900px) {
-      .language-switch {
-        top: 20px !important;
-        right: 84px !important;
-        gap: 6px !important;
-      }
+      html, body { max-width: 100%; overflow-x: hidden; }
+      header .logo-texto { display: none !important; }
+      header .logo { gap: 0 !important; }
+      .language-switch { top: 26px !important; right: 20px !important; gap: 6px !important; }
       .language-switch a { width: 27px !important; height: 18px !important; }
+      body.has-menu-toggle .language-switch { right: 76px !important; }
     }
   `;
   document.head.append(style);
