@@ -85,6 +85,7 @@
   // heading before walking individual text nodes, so it can never be split
   // into a Spanish first line and an English second line.
   document.querySelectorAll('h1, h2, h3').forEach(element => {
+    if (element.closest('[data-no-translate]')) return;
     const value = clean(element.textContent);
     const lower = value.toLocaleLowerCase('es');
     const heading = fixedHeadings.find(([first, second]) => lower.includes(first) && (!second || lower.includes(second)));
@@ -93,6 +94,7 @@
   const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
   const nodes=[]; while(walker.nextNode()) nodes.push(walker.currentNode);
   nodes.forEach(node => {
+    if (node.parentElement?.closest('[data-no-translate]')) return;
     const key = clean(node.nodeValue);
     const lower = key.toLocaleLowerCase('es');
     const heading = fixedHeadings.find(([first, second]) => lower.includes(first) && (!second || lower.includes(second)));
@@ -120,7 +122,7 @@
     const parent = node.parentElement;
     // Translate every visible text node. This covers headings without accents
     // (for example, “Trigo”) as well as paragraphs and labels.
-    if (value.length > 1 && parent && !['SCRIPT', 'STYLE', 'NOSCRIPT'].includes(parent.tagName) && !translations.has(value) && !long.has(value)) remaining.push([node, value]);
+    if (value.length > 1 && parent && !parent.closest('[data-no-translate]') && !['SCRIPT', 'STYLE', 'NOSCRIPT'].includes(parent.tagName) && !translations.has(value) && !long.has(value)) remaining.push([node, value]);
   }
   Promise.all(remaining.map(async ([node, value]) => {
     try { node.nodeValue = await translate(value); } catch (_) { /* keeps original copy if offline */ }
