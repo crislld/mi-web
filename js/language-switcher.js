@@ -7,7 +7,9 @@
 
   if (!document.body || document.querySelector('.language-switch')) return;
 
-  const switcher = document.createElement('nav');
+  // Never use a <nav> here: the site turns every navigation into the
+  // full-screen mobile menu below 900px.
+  const switcher = document.createElement('div');
   switcher.className = 'language-switch';
   switcher.setAttribute('aria-label', isEnglish ? 'Language selector' : 'Selector de idioma');
   switcher.innerHTML = `
