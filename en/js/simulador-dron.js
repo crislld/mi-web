@@ -1,4 +1,24 @@
 const simQ = s => document.querySelector(s);
+
+// The same simulator is also embedded in the Virtual Lab. In that context,
+// keep only the interactive interface: no duplicated page header or intro.
+if (new URLSearchParams(location.search).has('embed')) {
+  document.documentElement.classList.add('sim-embedded');
+  const embedStyle = document.createElement('style');
+  embedStyle.textContent = `
+    html.sim-embedded, html.sim-embedded body { margin: 0; min-height: 100%; background: #092038; overflow: hidden; }
+    .sim-embedded body > header,
+    .sim-embedded .sim-heading,
+    .sim-embedded .sim-help,
+    .sim-embedded .language-switch { display: none !important; }
+    .sim-embedded .sim-page { min-height: 100vh; padding: 0 !important; display: flex; background: #092038; }
+    .sim-embedded .sim-shell { width: 100%; max-width: none; margin: 0; border-radius: 0; box-shadow: none; align-self: stretch; }
+    @media (max-width: 640px) {
+      .sim-embedded .sim-shell { min-height: 100vh; }
+    }
+  `;
+  document.head.append(embedStyle);
+}
 const simM = {
   water: { title:'M01 · TEMPERATURA DE CUBIERTA', brief:'Escanea cuatro microparcelas para estimar el estrés hídrico.', tag:'M01 / ESTRÉS HÍDRICO', camera:'Zenmuse H20T · TÉRMICA 640×512', image:'campo-cebada-aereo.jpg', metric:'Tc', base:26.4, unit:' °C' },
   vigor: { title:'M02 · VIGOR Y FENOTIPADO', brief:'Obtén muestras NDVI de las líneas de cebada del ensayo.', tag:'M02 / FENOTIPADO', camera:'MicaSense RedEdge‑P · 5 BANDAS', image:'ensayo-cebadas-mercedes.png', metric:'NDVI', base:.58, unit:'' },

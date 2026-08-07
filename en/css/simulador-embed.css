@@ -1,3 +1,39 @@
-/* Simulador jugable integrado en la página Laboratorio */
-.lab-simulator{padding:120px 0;background:linear-gradient(135deg,#061a34,#0b2f46)}
-.lab-simulator .titulo-seccion h2{color:#fff}.simulator-intro{max-width:760px;margin:28px auto 42px;color:rgba(255,255,255,.82);text-align:center;font-size:19px;line-height:1.75}.simulator-frame{overflow:hidden;border:1px solid rgba(200,161,90,.7);border-radius:26px;background:#071d3a;box-shadow:0 28px 70px rgba(0,0,0,.34)}.simulator-frame iframe{display:block;width:100%;height:960px;border:0;background:#071d3a}@media(max-width:768px){.lab-simulator{padding:85px 0}.simulator-intro{padding:0 18px;font-size:16px}.simulator-frame{border-radius:16px}.simulator-frame iframe{height:1080px}}
+/* Embedded interactive flight simulator */
+.lab-simulator {
+  padding: 120px 0;
+  background: linear-gradient(135deg, #061a34, #0b2f46);
+}
+
+.lab-simulator .titulo-seccion h2 { color: #fff; }
+
+.simulator-intro {
+  max-width: 760px;
+  margin: 28px auto 42px;
+  color: rgba(255,255,255,.82);
+  text-align: center;
+  font-size: 19px;
+  line-height: 1.75;
+}
+
+.simulator-frame {
+  overflow: hidden;
+  border: 1px solid rgba(200,161,90,.7);
+  border-radius: 26px;
+  background: #071d3a;
+  box-shadow: 0 28px 70px rgba(0,0,0,.34);
+}
+
+.simulator-frame iframe {
+  display: block;
+  width: 100%;
+  height: 660px;
+  border: 0;
+  background: #071d3a;
+}
+
+@media (max-width: 768px) {
+  .lab-simulator { padding: 85px 0; }
+  .simulator-intro { padding: 0 18px; font-size: 16px; }
+  .simulator-frame { border-radius: 16px; }
+  .simulator-frame iframe { height: 1080px; }
+}
