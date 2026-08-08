@@ -72,6 +72,12 @@
       header .logo h2,
       header .logo h3,
       header .logo p { display: none !important; }
+      /* Las páginas de líneas de investigación añaden un rótulo a la
+         derecha de la cabecera (por ejemplo, TELEDETECCIÓN). En móvil se
+         oculta: las banderas ocupan esa zona y el rótulo ya aparece en el
+         título principal de la página. */
+      header .menu-linea,
+      header .titulo-linea-menu { display: none !important; }
       header .logo { gap: 0 !important; }
       .language-switch { top: 26px !important; right: 20px !important; gap: 6px !important; }
       .language-switch a { width: 27px !important; height: 18px !important; }

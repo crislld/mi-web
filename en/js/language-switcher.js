@@ -34,6 +34,7 @@
          use .logo-text and others use .logo-texto. */
       header .logo-text, header .logo-texto,
       header .logo h2, header .logo h3, header .logo p { display: none !important; }
+      header .menu-linea, header .titulo-linea-menu { display: none !important; }
       header .logo { gap: 0 !important; }
       .language-switch { top: 26px !important; right: 20px !important; gap: 6px !important; }
       .language-switch a { width: 27px !important; height: 18px !important; }
