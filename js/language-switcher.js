@@ -64,7 +64,14 @@
     }
     @media (max-width: 900px) {
       html, body { max-width: 100%; overflow-x: hidden; }
-      header .logo-texto { display: none !important; }
+      /* Las subpáginas de investigación usan dos clases de logotipo
+         distintas. En móvil mostramos solo el monograma DG para que el
+         selector de idioma nunca cubra el nombre. */
+      header .logo-text,
+      header .logo-texto,
+      header .logo h2,
+      header .logo h3,
+      header .logo p { display: none !important; }
       header .logo { gap: 0 !important; }
       .language-switch { top: 26px !important; right: 20px !important; gap: 6px !important; }
       .language-switch a { width: 27px !important; height: 18px !important; }
