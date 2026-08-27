@@ -554,6 +554,33 @@ IMPACTO
 
 }
 
+.impacto-featured{
+
+    margin:0 0 70px;
+
+}
+
+.impacto-featured img{
+
+    width:100%;
+    height:clamp(430px,52vw,690px);
+    object-fit:cover;
+    object-position:center 52%;
+    border-radius:26px;
+    box-shadow:var(--shadow);
+
+}
+
+.impacto-featured figcaption{
+
+    margin-top:18px;
+    padding-left:4px;
+    color:var(--text);
+    font-size:.92rem;
+    font-style:italic;
+
+}
+
 .impacto-grid{
 
     display:grid;
@@ -814,6 +841,7 @@ ANIMACIONES
 
 .pipeline-image img,
 .ecosistema-image img,
+.impacto-featured img,
 .impacto-image img,
 .timeline-image img{
 
@@ -824,6 +852,7 @@ ANIMACIONES
 
 .pipeline-image img:hover,
 .ecosistema-image img:hover,
+.impacto-featured img:hover,
 .impacto-image img:hover,
 .timeline-image img:hover{
 
@@ -908,6 +937,24 @@ RESPONSIVE
     .feature{
 
         padding:28px;
+
+    }
+
+    .impacto-featured{
+
+        margin-bottom:50px;
+
+    }
+
+    .impacto-featured img{
+
+        height:390px;
+
+    }
+
+    .impacto-grid{
+
+        grid-template-columns:1fr;
 
     }
 
