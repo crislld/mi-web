@@ -2,3 +2,4 @@
 
 /* Transparent avatar: integrate the character directly into the scene. */
 .hero-avatar img{border-radius:0;box-shadow:none;filter:drop-shadow(0 14px 18px #0003)}.portrait{background:transparent;border:0;border-radius:0}.completion-guide img{border-radius:0}
+.exit-button{display:inline-flex;align-items:center;justify-content:center;min-height:46px;text-decoration:none;white-space:nowrap}@media(max-width:600px){.exit-button{width:100%;min-height:36px}}
